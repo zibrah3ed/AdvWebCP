@@ -1,0 +1,43 @@
+.mainButton {
+	margin-top: 0.2em; 
+	margin-bottom: 0.5em; 
+	min-width: 19em;
+	}
+
+li.beautify {
+	width: 85%; 
+	margin: 0 auto; 
+	margin-top: 5px;
+	
+	}
+	
+.themeButton {
+	max-width: 12em; 
+	margin-top: 1em; 
+	margin: 0 auto;
+	}
+	
+li.beautifytop{
+	width: 85% !important; 
+	margin: 0 auto; 
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+	
+.formArea {
+	max-width: 40em;
+}
+.textarea2 {
+	min-height: 10em;
+}
+.in, .out {
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-duration: 150ms !important;
+}
+
+table, th, td {
+		border: 1px solid white;
+		border-collapse: collapse;
+		padding: 5px;
+		
+	}
