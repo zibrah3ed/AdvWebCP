@@ -1,4 +1,5 @@
 <?php
+ini_set('display_errors',1);
 
       // Connect to MySQL
       include 'config.php';
@@ -6,7 +7,7 @@
 
 //$mysqli = mysqli_connect( dbhost, dbuser,dbpass, dbname );
 
-
+echo "Im"
     //User ID is hardcoded for now to show functionality
     $userID = '1633040277499'
     $RecipeName = (isset($_POST['recipeTitle'])    ? $_POST['recipeTitle']   : '');
