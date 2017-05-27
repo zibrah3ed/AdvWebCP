@@ -4,7 +4,7 @@
       include 'config.php';
       include 'opendb.php';
 
-$mysqli = mysqli_connect( dbhost, dbuser,dbpass, dbname );
+//$mysqli = mysqli_connect( dbhost, dbuser,dbpass, dbname );
 
 
     //User ID is hardcoded for now to show functionality
