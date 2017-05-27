@@ -3,7 +3,8 @@
       // Connect to MySQL
       include 'config.php';
       include 'opendb.php';
-$mysqli = new mysqli( 'localhost', 'YOUR_USERNAME','YOUR_PASSWORD', 'YOUR_DBNAME' );
+
+$mysqli = new mysqli( dbhost, dbuser,dbpass, dbname );
 
 
     //User ID is hardcoded for now to show functionality
