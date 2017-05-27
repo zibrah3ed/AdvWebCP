@@ -34,10 +34,10 @@ $sql = "INSERT INTO recipes( userID,RecipeName,gfree,feeds,difficulty,directions
 $insert = $conn->query($sql);
 
 // Print response from MySQL
-if ( $insert ) {
-echo "Success! Row ID: {$mysqli->insert_id}";
+if ( $insert === TRUE ) {
+echo "Recipe Submission Success!";
 } else {
-die("Error: {$mysqli->errno} : {$mysqli->error}");
+echo "Error: ". $sql ."<br>" . $conn-error;
 }
 
 
