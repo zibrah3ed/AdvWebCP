@@ -246,33 +246,33 @@
 	</center>
   </div>
   <div>
-      <form id="testForm" action="action_page.php" method="post" class="formArea" style="width: 95%; margin: 0 auto; margin-top: 1em;">
+      <form id="testForm" action="addrecipe.php" method="post" class="formArea" style="width: 95%; margin: 0 auto; margin-top: 1em;">
       <div class="ui-body-d ui-body img-rounded" data-theme="d" >
         <div data-role="fieldcontain">
-          <label for="textarea" data-theme="d">Recipe Title:</label>
+          <label for="recipeTitle" data-theme="d">Recipe Title:</label>
           <textarea cols="40" rows="8" name="textarea" id="recipeTitle"></textarea>
         </div>
         <div data-role="fieldcontain">
-          <label for="flipswitch">Gluten Free:</label>
+          <label for="gfree">Gluten Free:</label>
           <select name="flipswitch" id="gfree" data-role="slider" data-theme="d">
             <option value="off">no</option>
             <option value="on">yes</option>
           </select>
         </div>
         <div data-role="fieldcontain">
-          <label for="number">Feeds:</label>
+          <label for="feeds">Feeds:</label>
           <input type="number" name="number" id="feeds" value="1" min="1" max="20"  />
         </div>
         <div data-role="fieldcontain">
-          <label for="slider">Difficulty:</label>
+          <label for="difficulty"><bold>Difficulty:</bold></label>
           <input type="range" name="slider" id="difficulty" value="1" min="1" max="5" />
         </div>
 
         <div data-role="fieldcontain">
-          <label for="textarea2">Directions:</label>
+          <label for="Directions">Directions:</label>
           <textarea cols="40" rows="8" name="textarea2" id="Directions" style="min-height: 10em;"> Recipe Goes Here!</textarea>
         </div>
-        <a href="" data-role="button">Submit</a>
+        <a href="addrecipe.php" data-role="button">Submit</a>
 
 
       </div>
