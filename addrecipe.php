@@ -3,9 +3,9 @@ ini_set('display_errors',1);
 
       // Connect to MySQL
       include 'config.php';
-      include 'opendb.php';
+      //include 'opendb.php';
 
-//$mysqli = mysqli_connect( dbhost, dbuser,dbpass, dbname );
+$conn = mysqli_connect( $dbhost, $dbuser, $dbpass, $dbname );
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
