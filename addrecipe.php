@@ -19,7 +19,7 @@ if (!$conn) {
     $directions = (isset($_POST['directions'])    ? $_POST['directions']   : '');
 
 // Insert our data
-$sql = "INSERT INTO [recipes] ( userID,RecipeName,gfree,feeds,difficulty,directions)
+$sql = "INSERT INTO recipes( userID,RecipeName,gfree,feeds,difficulty,directions)
   VALUES (
   '{$mysqli->real_escape_string(isset($_POST['userID'])    ? $_POST['userID']   : '')}' ,
   '{$mysqli->real_escape_string(isset($_POST['RecipeName'])    ? $_POST['RecipeName']   : '')}'	,
@@ -30,7 +30,7 @@ $sql = "INSERT INTO [recipes] ( userID,RecipeName,gfree,feeds,difficulty,directi
   )";
 
 
-$insert = $mysqli->query($sql);
+$insert = $conn->query($sql);
 
 // Print response from MySQL
 if ( $insert ) {

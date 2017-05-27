@@ -20,7 +20,11 @@
 <![endif]-->
 </head>
 </body>
-
+<div class="logo">
+        <center>
+            <img src="themes/images/banner.png" class="img-rounded img-responsive" width="264" height="85" alt="">
+      </center>
+</div>
 
 
 <?php
@@ -33,7 +37,7 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql= "SELECT Userid, Username, fname, lname, email, FROM users";
+$sql= "SELECT Userid, Username, fname, lname, email, FROM grocerydb.users";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
