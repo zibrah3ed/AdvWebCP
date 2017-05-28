@@ -23,7 +23,7 @@
 		<div id="page" data-role="page" data-theme="a" >
 	<div data-role="header" data-theme="a">
     <h1>
-	     Find your contact
+	     User Recipes
 		</h1>
   </div>
   <div class="logo">
@@ -31,7 +31,7 @@
         <img src="themes/images/banner.png" class="img-rounded img-responsive" width="264" height="85" alt="">
       </center>
    </div>
-				<div data-role="content" >
+				<div data-role="content" data-theme="a" >
 
           <div data-role="content" data-theme="a" style="max-width: 100%;">
               <ul data-role="listview" data-inset="true" data-theme="d">
@@ -47,21 +47,21 @@
                     die("Connection failed: " . mysqli_connect_error());
                 }
 
-                $sql= "SELECT recipeid,userID,RecipeName,gfree,feeds,difficulty,directions
+                $sql= "SELECT *
                         FROM recipes
+                        WHERE userID=1633040277499
                         ";
                 $result = mysqli_query($conn, $sql);
 
                 if (mysqli_num_rows($result) > 0) {
                     // output data of each row
                     while($row = mysqli_fetch_assoc($result)) {
-                        echo "<li><a href'#'>". "<h3>Recipe Name: " . $row["RecipeName"]. "</h3><br>";
-                        echo "<p>User ID: " . $row["userID"]. " " . $row["lname"]. "</p><br>";
-                        echo "<p>Recipe ID:" . $row["recipeid"]. "</p><br>";
-                        echo "<p>Gluten Free? :" . $row["gfree"]."</p><br>";
-                        echo "<p>Feeds? :" . $row["feeds"]."</p><br>";
-                        echo "<p>Difficulty :" . $row["difficulty"]."</p><br>";
-                        echo "<p>Directions :" . $row["directions"]."</p><br>";
+                        echo "<li><a href'#'>". "<h3>Recipe Name: " . $row["RecipeName"]. "</h3>";
+                        echo "<p>Recipe ID:" . $row["recipeid"]. "</p>";
+                        echo "<p>Gluten Free? :" . $row["gfree"]."</p>";
+                        echo "<p>Feeds? :" . $row["feeds"]."</p>";
+                        echo "<p>Difficulty :" . $row["difficulty"]."</p>";
+                        echo "<p>Directions :" . $row["directions"]."</p>";
                         echo "</a><a href='#'></a></li>";
                     }
                 } else {
@@ -73,6 +73,28 @@
                 ?>
         </ul>
       </div>
+      <!-- AddToAny BEGIN Code adapted from code provided by https://www.addtoany.com/buttons/for/website -->
+                  <div class="a2a_kit a2a_kit_size_32 a2a_default_style text-center">
+                  <!-- 	1. Required float and margin edits to render properly
+                  		2. Privacy Badger blocked button rendering and had to be disabled.
+                  -->
+                  <p style="float:left; margin: 0em 1em 1em 1em;">Share Recipes: </p>
+                  <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+                  <a class="a2a_button_twitter"></a>
+                  <a class="a2a_button_facebook"></a>
+                  <a class="a2a_button_google_plus"></a>
+                  <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true" ></div>
+
+    </div>
+                  </div>
+                  <script async src="https://static.addtoany.com/menu/page.js"></script>
+  			<!-- AddToAny END -->
+
+
+    <div data-role="footer">
+      <h4>Tyson Funk&copy; 2016</h4>
+    </div>
+  </div>
     </div>
   </div>
   </body>
