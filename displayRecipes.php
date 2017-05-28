@@ -11,7 +11,10 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql= "SELECT recipeid,userID,RecipeName,gfree,feeds,difficulty,directions FROM recipes";
+$sql= "SELECT recipeid,userID,RecipeName,gfree,feeds,difficulty,directions
+        FROM recipes
+        WHERE userID = 163304027749
+        ";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
