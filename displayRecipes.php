@@ -45,11 +45,6 @@
                         ";
                 $result = mysqli_query($conn, $sql);
 
-                <li><a href="#">
-                  <h3>Goat Cheese Pancakes</h3>
-                  <p>Added : 10/23/15</p>
-                </a><a href="#">Default</a></li>
-
                 if (mysqli_num_rows($result) > 0) {
                     // output data of each row
                     while($row = mysqli_fetch_assoc($result)) {
