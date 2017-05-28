@@ -18,12 +18,19 @@
 	}
 </style>
 </head>
+
 	<body>
 		<div id="page" data-role="page" data-theme="a" >
 	<div data-role="header" data-theme="a">
-<h1>
-	Find your contact
-		</h1>	</div>
+    <h1>
+	     Find your contact
+		</h1>
+  </div>
+  <div class="logo">
+    	<center>
+        <img src="themes/images/banner.png" class="img-rounded img-responsive" width="264" height="85" alt="">
+      </center>
+   </div>
 				<div data-role="content" >
 
           <div data-role="content" data-theme="a" style="max-width: 100%;">
@@ -67,5 +74,6 @@
         </ul>
       </div>
     </div>
+  </div>
   </body>
 </html>
