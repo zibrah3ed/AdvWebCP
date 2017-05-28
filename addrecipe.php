@@ -33,9 +33,8 @@ ini_set('display_errors',1);
 
       // Connect to MySQL
       include 'config.php';
-      //include 'opendb.php';
+      include 'opendb.php';
 
-$conn = mysqli_connect( $dbhost, $dbuser, $dbpass, $dbname );
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
@@ -70,7 +69,7 @@ echo "<h2>Recipe Submission Success!</h2>";
 echo "Error: ". $sql ."<br>" . $conn-error;
 }
 
-
+mysqli_close($conn);
   ?>
 </div>
 </body>

@@ -25,47 +25,52 @@
 	Find your contact
 		</h1>	</div>
 				<div data-role="content" >
-<?php
-/*
-$servername = 'us-cdbr-azure-southcentral-f.cloudapp.net';
-$username = 'b618b9921664aa';
-$password = 'd847c445';
-$dbname = 'grocerydb';
-*/
-// Create connection
-//$conn = mysqli_connect($servername, $username, $password, $dbname);
-include 'config.php';
-include 'opendb.php';
+
+          <div data-role="content" data-theme="a" style="max-width: 100%;">
+              <ul data-role="listview" data-inset="true" data-theme="d">
+                <?php
+                // Create connection
+
+                include 'config.php';
+                include 'opendb.php';
 
 
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+                // Check connection
+                if (!$conn) {
+                    die("Connection failed: " . mysqli_connect_error());
+                }
 
-$sql= "SELECT recipeid,userID,RecipeName,gfree,feeds,difficulty,directions
-        FROM recipes
-        ";
-$result = mysqli_query($conn, $sql);
+                $sql= "SELECT recipeid,userID,RecipeName,gfree,feeds,difficulty,directions
+                        FROM recipes
+                        ";
+                $result = mysqli_query($conn, $sql);
 
-if (mysqli_num_rows($result) > 0) {
-    // output data of each row
-    while($row = mysqli_fetch_assoc($result)) {
-        echo "Recipe ID: " . $row["recipeid"]. "<br>";
-        echo "User ID: " . $row["userID"]. " " . $row["lname"]. "<br>";
-        echo "Recipe Name :" . $row["RecipeName"]. "<br>";
-        echo "Gluten Free? :" . $row["gfree"]."<br><hr>";
-        echo "Feeds? :" . $row["feeds"]."<br><hr>";
-        echo "Difficulty :" . $row["difficulty"]."<br><hr>";
-        echo "Directions :" . $row["directions"]."<br><hr>";
-    }
-} else {
-    echo "0 results";
-}
+                <li><a href="#">
+                  <h3>Goat Cheese Pancakes</h3>
+                  <p>Added : 10/23/15</p>
+                </a><a href="#">Default</a></li>
 
-mysqli_close($conn);
+                if (mysqli_num_rows($result) > 0) {
+                    // output data of each row
+                    while($row = mysqli_fetch_assoc($result)) {
+                        echo "<li><a href'#'>". "<h3>Recipe Name: " . $row["RecipeName"]. "</h3><br>";
+                        echo "<p>User ID: " . $row["userID"]. " " . $row["lname"]. "</p><br>";
+                        echo "<p>Recipe ID:" . $row["recipeid"]. "</p><br>";
+                        echo "<p>Gluten Free? :" . $row["gfree"]."</p><br>";
+                        echo "<p>Feeds? :" . $row["feeds"]."</p><br>";
+                        echo "<p>Difficulty :" . $row["difficulty"]."</p><br>";
+                        echo "<p>Directions :" . $row["directions"]."</p><br>";
+                        echo "</a><a href='#'></a></li>";
+                    }
+                } else {
+                    echo "0 results";
+                }
 
-?>
-</div>
-</body>
+                mysqli_close($conn);
+
+                ?>
+        </ul>
+      </div>
+    </div>
+  </body>
 </html>
