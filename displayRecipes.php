@@ -46,6 +46,7 @@
                 if (!$conn) {
                     die("Connection failed: " . mysqli_connect_error());
                 }
+                // User ID hardcoded atm, login page will need to be added
 
                 $sql= "SELECT *
                         FROM recipes
