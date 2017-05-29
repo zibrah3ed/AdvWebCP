@@ -69,9 +69,9 @@
 
 				// Print response from MySQL
 				if ( mysqli_query($conn,$sql) ) {
-				echo "<h2>Recipe Submission Success!</h2>";
+					echo "<h2>Recipe Submission Success!</h2>";
 				} else {
-				echo "Error: ". $sql ."<br>" . $conn-error;
+					echo "Error: ". $sql ."<br>" . $conn-error;
 				}
 
 				mysqli_close($conn);
