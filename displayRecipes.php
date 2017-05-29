@@ -45,9 +45,7 @@
                 // Check connection
                 if (!$conn) {
                     die("Connection failed: " . mysqli_connect_error());
-                } else {
-									echo "<h1>Connection Success</h1><br />"
-								}
+                }
                 // User ID hardcoded atm, login page will need to be added
 
                 $sql= "SELECT *
