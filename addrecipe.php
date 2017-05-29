@@ -34,7 +34,11 @@
 		<div data-role="content" data-theme="a" >
 				<?php
 				// Create connection
-				include 'config.php';
+				$dbhost = 'us-cdbr-azure-southcentral-f.cloudapp.net';
+        $dbuser = 'b618b9921664aa';
+        $dbpass = 'd847c445';
+        $dbname = 'grocerydb';
+
 				$conn = new mysqli( $dbhost, $dbuser, $dbpass, $dbname );
 				//include 'opendb.php';
 
