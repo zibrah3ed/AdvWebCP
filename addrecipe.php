@@ -65,10 +65,10 @@
 				  //)";
 
 
-				$insert = $conn->query($sql);
+				//$insert = $conn->query($sql);
 
 				// Print response from MySQL
-				if ( $insert === TRUE ) {
+				if ( mysqli_query($conn,$sql) ) {
 				echo "<h2>Recipe Submission Success!</h2>";
 				} else {
 				echo "Error: ". $sql ."<br>" . $conn-error;
