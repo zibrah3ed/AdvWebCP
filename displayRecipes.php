@@ -1,6 +1,6 @@
 <html>
 		<head>
-<title>Find a Contact</title>
+<title>My Recipes</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="styles/custom.css" />
 <link rel="stylesheet" href="themes/rasmussenthemeroller.min.css" />

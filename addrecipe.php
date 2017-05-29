@@ -80,7 +80,7 @@
 					echo "Error: ". $sql ."<br>" . $conn-error;
 				}
 
-				//mysqli_close($conn);
+				mysqli_close($conn);
 				  ?>
 				<div data-role="footer">
 					<h4>Tyson Funk&copy; 2016</h4>
