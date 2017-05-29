@@ -34,9 +34,9 @@
 		<div data-role="content" data-theme="a" >
 				<?php
 				// Create connection
-
 				include 'config.php';
-				include 'opendb.php';
+				$conn = new mysqli( $dbhost, $dbuser, $dbpass, $dbname );
+				//include 'opendb.php';
 
 				// Check connection
 				if (!$conn) {
@@ -45,7 +45,7 @@
 				// User ID hardcoded atm, login page will need to be added
 
 				    //User ID is hardcoded for now to show functionality
-				    $userID = '1633040277499'
+				    $userID = '1633040277499';
 				    $RecipeName = (isset($_POST['recipeTitle'])    ? $_POST['recipeTitle']   : '');
 				    $gfree = (isset($_POST['gfree'])    ? $_POST['gfree']   : '');
 				    $feeds = (isset($_POST['feeds'])    ? $_POST['feeds']   : '');
@@ -54,7 +54,13 @@
 
 				// Insert our data
 				$sql = "INSERT INTO recipes( userID,RecipeName,gfree,feeds,difficulty,directions)
-				  VALUES ('$userID','$RecipeName','$gfree','$feeds','$difficulty','$directions')";
+				  VALUES (mysqli->real_escape_string($userID),
+									mysqli->real_escape_string($RecipeName),
+									mysqli->real_escape_string($gfree),
+									mysqli->real_escape_string($feeds),
+									mysqli->real_escape_string($difficulty),
+									mysqli->real_escape_string($directions)
+								)";
 				  //VALUES (
 				  //'{$mysqli->real_escape_string(isset($_POST['userID'])    ? $_POST['userID']   : '')}' ,
 				  //'{$mysqli->real_escape_string(isset($_POST['RecipeName'])    ? $_POST['RecipeName']   : '')}'	,
@@ -65,7 +71,7 @@
 				  //)";
 
 
-				//$insert = $conn->query($sql);
+				$insert = $conn->query($sql);
 
 				// Print response from MySQL
 				if ( mysqli_query($conn,$sql) ) {
@@ -74,7 +80,7 @@
 					echo "Error: ". $sql ."<br>" . $conn-error;
 				}
 
-				mysqli_close($conn);
+				//mysqli_close($conn);
 				  ?>
 				<div data-role="footer">
 					<h4>Tyson Funk&copy; 2016</h4>
