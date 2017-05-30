@@ -12,8 +12,8 @@
   }
 
   // Use Hard coded values to check functionality
-  $sql = "INSERT INTO recipes(recipeID,userID,RecipeName,gfree,feeds,difficulty,directions)
-   VALUES (200,1234567890,'Help',1,1,1,'hello world')";
+  $sql = "INSERT INTO recipes(userID,RecipeName,gfree,feeds,difficulty,directions)
+   VALUES (1234567890,'Help',1,1,1,'hello world PART DEUX')";
 
     if ($conn->query($sql) === TRUE) {
       echo "New record created successfully";
