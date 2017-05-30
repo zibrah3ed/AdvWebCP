@@ -54,24 +54,25 @@
 				    $difficulty = (isset($_POST['difficulty'])    ? $_POST['difficulty']   : '');
 				    $directions = (isset($_POST['directions'])    ? $_POST['directions']   : '');
 
-						$RecipeName = mysql_real_escape_string($RecipeName);
-						$directions = mysql_real_escape_string($directions);
+						//$RecipeName = mysql_real_escape_string($RecipeName);
+						//$directions = mysql_real_escape_string($directions);
 
 				// Insert our data
 				$sql = "INSERT INTO recipes( userID,RecipeName,gfree,feeds,difficulty,directions)
 				  VALUES ($userID,
-									'{$RecipeName}',
+									'{mysqli_real_escape_string($conn,$RecipeName)}',
 									$gfree,
 									$feeds,
 									$difficulty,
-									'{$directions}'
+									'{mysqli_real_escape_string($conn,$directions)}'
 								)";
-				 
+
 					if ($conn->query($sql) === TRUE) {
 						echo "New record created successfully";
 					} else {
 						echo "Error: " . $sql . "<br>" . $conn->error;
 					}
+
 
 				mysqli_close($conn);
 				  ?>
