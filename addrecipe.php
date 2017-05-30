@@ -57,11 +57,11 @@
 				// Insert our data
 				$sql = "INSERT INTO recipes( userID,RecipeName,gfree,feeds,difficulty,directions)
 				  VALUES ($userID,
-									$RecipeName,
+									'{$mysqli->real_escape_string($RecipeName)}',
 									$gfree,
 									$feeds,
 									$difficulty,
-									$directions
+									'{$mysqli->real_escape_string($directions)}'
 								)";
 				  //VALUES (
 				  //'{$mysqli->real_escape_string(isset($_POST['userID'])    ? $_POST['userID']   : '')}' ,
