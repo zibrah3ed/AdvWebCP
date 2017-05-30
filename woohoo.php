@@ -1,7 +1,7 @@
 <?php
   // Connection String working
   include 'config.php';
-  $conn = new mysqli($dbhost, $dbuser, $dbpass);
+  $conn = new mysqli($dbhost, $dbuser, $dbpass,$dbname);
 
   /* check connection */
   if (mysqli_connect_errno()) {
@@ -12,8 +12,8 @@
   }
 
   // Use Hard coded values to check functionality
-  $sql = "INSERT INTO recipes( userID,RecipeName,gfree,feeds,difficulty,directions)
-   VALUES (1234567890,'Help',1,1,1,"hello world")";
+  $sql = "INSERT INTO recipes(recipeID,userID,RecipeName,gfree,feeds,difficulty,directions)
+   VALUES (200,1234567890,'Help',1,1,1,'hello world')";
 
     if ($conn->query($sql) === TRUE) {
       echo "New record created successfully";
