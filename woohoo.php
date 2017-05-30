@@ -1,6 +1,6 @@
 <?php
 include 'config.php';
-include 'opendb.php';
+$conn = new mysqli($dbhost, $dbuser, $dbpass);
 
 /* check connection */
 if (mysqli_connect_errno()) {
@@ -8,8 +8,8 @@ if (mysqli_connect_errno()) {
     exit();
 }
 // Use Hard coded values to check functionality
-mysqli_query($conn,"INSERT INTO recipes( userID,RecipeName,gfree,feeds,difficulty,directions)
-  VALUES (1234567890,'Help',1,1,1,"hello world")");
+//mysqli_query($conn,"INSERT INTO recipes( userID,RecipeName,gfree,feeds,difficulty,directions)
+//  VALUES (1234567890,'Help',1,1,1,"hello world")");
 
 mysqli_close($conn);
 ?>
