@@ -56,11 +56,11 @@
 
 				// Insert our data
 				$sql = "INSERT INTO recipes( userID,RecipeName,gfree,feeds,difficulty,directions)
-				  VALUES (mysqli->real_escape_string($userID),
+				  VALUES ($userID,
 									mysqli->real_escape_string($RecipeName),
-									mysqli->real_escape_string($gfree),
-									mysqli->real_escape_string($feeds),
-									mysqli->real_escape_string($difficulty),
+									$gfree,
+									$feeds,
+									$difficulty,
 									mysqli->real_escape_string($directions)
 								)";
 				  //VALUES (
