@@ -6,6 +6,8 @@ $conn = new mysqli($dbhost, $dbuser, $dbpass);
 if (mysqli_connect_errno()) {
     printf("Connect failed: %s\n", mysqli_connect_error());
     exit();
+} else {
+  echo "<h1>PARTY</h1>";
 }
 // Use Hard coded values to check functionality
 //mysqli_query($conn,"INSERT INTO recipes( userID,RecipeName,gfree,feeds,difficulty,directions)
