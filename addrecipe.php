@@ -33,19 +33,17 @@
    	</div>
 		<div data-role="content" data-theme="a" >
 				<?php
-				// Create connection
-				$dbhost = 'us-cdbr-azure-southcentral-f.cloudapp.net';
-        $dbuser = 'b618b9921664aa';
-        $dbpass = 'd847c445';
-        $dbname = 'grocerydb';
+				// Connection String working
+			  include 'config.php';
+			  $conn = new mysqli($dbhost, $dbuser, $dbpass,$dbname);
 
-				$conn = new mysqli( $dbhost, $dbuser, $dbpass, $dbname );
-				//include 'opendb.php';
-
-				// Check connection
-				if (!$conn) {
-						die("Connection failed: " . mysqli_connect_error());
-				}
+				/* check connection */
+			  if (mysqli_connect_errno()) {
+			      printf("Connect failed: %s\n", mysqli_connect_error());
+			      exit();
+			  } else {
+			    echo "<h1>Successful Recipe Addition!</h1>";
+			  }
 				// User ID hardcoded atm, login page will need to be added
 
 				    //User ID is hardcoded for now to show functionality
@@ -74,15 +72,11 @@
 				  //'{$mysqli->real_escape_string(isset($_POST['directions'])    ? $_POST['directions']   : '')}'
 				  //)";
 
-
-				$insert = $conn->query($sql);
-
-				// Print response from MySQL
-				if ( mysqli_query($conn,$sql) ) {
-					echo "<h2>Recipe Submission Success!</h2>";
-				} else {
-					echo "Error: ". $sql ."<br>" . $conn-error;
-				}
+					if ($conn->query($sql) === TRUE) {
+						echo "New record created successfully";
+					} else {
+						echo "Error: " . $sql . "<br>" . $conn->error;
+					}
 
 				mysqli_close($conn);
 				  ?>
