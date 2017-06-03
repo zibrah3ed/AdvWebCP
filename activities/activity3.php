@@ -49,14 +49,15 @@
     											WHERE team_id = 55
                         ";
                 $result = mysqli_query($conn, $sql);
-								echo "<div class='text-center'>";
-								echo "<H3>" . mysqli_fetch_assoc($result)["teamName"] 	. "</H3>";
-								echo "<H4>" .	mysqli_fetch_assoc($result)["teamMotto"] . "</h4";
-								echo "</div>";
-								echo "<ul data-role='listview' data-inset='true' data-theme='d'>";
-
 
                 if (mysqli_num_rows($result) > 0) {
+
+											echo "<div class='text-center'>";
+											echo "<H3>" . mysqli_fetch_assoc($result)["teamName"] 	. "</H3>";
+											echo "<H4>" .	mysqli_fetch_assoc($result)["teamMotto"] . "</h4";
+											echo "</div>";
+											echo "<ul data-role='listview' data-inset='true' data-theme='d'>";
+
                     // output data of each row
                     while($row = mysqli_fetch_assoc($result)) {
                         echo "<li><a href'#'>"	. "<h3>Team Name --  "	. $row["teamName"]. "</h3>";
