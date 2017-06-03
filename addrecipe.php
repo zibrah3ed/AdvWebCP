@@ -58,7 +58,7 @@
 						$directions = mysqli_real_escape_string($conn,$directions);
 
 				// Insert our data
-				$sql = "INSERT INTO recipes( userID,RecipeName,gfree,feeds,difficulty,directions)
+				$sql = "INSERT INTO recipes( users_userID,RecipeName,gfree,feeds,difficulty,directions)
 				  VALUES ($users_userID,
 									'{$recipeName}',
 									$gfree,
