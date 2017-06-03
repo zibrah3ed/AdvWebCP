@@ -50,8 +50,8 @@
                         ";
                 $result = mysqli_query($conn, $sql);
 								echo "<div class='text-center'>";
-								echo "<H3>" . $row["teamName"] 	. "</H3>";
-								echo "<H4>" .	$row["teamMotto"] . "</h4";
+								echo "<H3>" . mysqli_fetch_assoc($result)["teamName"] 	. "</H3>";
+								echo "<H4>" .	mysqli_fetch_assoc($result)["teamMotto"] . "</h4";
 								echo "</div>";
 								echo "<ul data-role='listview' data-inset='true' data-theme='d'>";
 
