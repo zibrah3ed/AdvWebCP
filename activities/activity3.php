@@ -30,7 +30,7 @@
 
           <div data-role="content" data-theme="a" style="max-width: 100%;">
 
-							<ul data-role="listview" data-inset="true" data-theme="d">
+
                 <?php
                 // Create connection
 
@@ -50,6 +50,11 @@
                         ";
                 $result = mysqli_query($conn, $sql);
 								echo "<div class='text-center'>";
+								echo "<H3>" . $row["teamName"] 	. "</H3>";
+								echo "<H4>" .	$row["teamMotto"] . "</h4";
+								echo "</div>";
+								echo "<ul data-role='listview' data-inset='true' data-theme='d'>"
+
 
                 if (mysqli_num_rows($result) > 0) {
                     // output data of each row
