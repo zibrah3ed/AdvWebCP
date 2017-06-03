@@ -43,7 +43,7 @@
                     die("Connection failed: " . mysqli_connect_error());
                 }
                 // TEAM ID hardcoded atm,
-                $sql= "SELECT act2table.fname, act2table.lname, act2table.phone, act3table.teamName,act3table.teamMotto
+                $sql= "SELECT act2table.fname, act2table.lname, act2table.phone, act2table.email, act3table.teamName,act3table.teamMotto
 													FROM act3table
     									INNER JOIN act2table ON act3table.teamID = act2table.team_id
     											WHERE team_id = 55
@@ -63,7 +63,8 @@
                     while($row = mysqli_fetch_assoc($result)) {
                         //echo "<li><a href'#'>"	. "<h3>Team Name --  "	. $row["teamName"]. "</h3>";
 												//echo "<p>Team Motto: "	. 												$row["teamMotto"]."</p>";
-                        echo "<p>First Name : "	. 												$row["fname"]. "</p>";
+												echo "<li><a href'#'>";
+												echo "<p>First Name : "	. 												$row["fname"]. "</p>";
                         echo "<p>Last Name : "		. 												$row["lname"]."</p>";
 												echo "<p>Phone : "		. 												$row["phone"]."</p>";
 												echo "<p>Email : "		. 												$row["email"]."</p>";
