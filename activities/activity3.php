@@ -57,7 +57,7 @@
 											echo "<H3>" . mysqli_fetch_assoc($result2)["teamName"] 	. "</H3>";
 											echo "<p><i>" .	mysqli_fetch_assoc($result2)["teamMotto"] . "</i></p>";
 											echo "</div>";
-											echo "<h4>Team Members</h4>
+											echo "<h4>Team Members</h4>";
 											echo "<ul data-role='listview' data-inset='true' data-theme='d'>";
 
                     // output data of each row
