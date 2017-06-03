@@ -50,17 +50,17 @@
 
                 $sql= "SELECT *
                         FROM recipes
-                        WHERE userID=1633040277499
+                        WHERE users_userID=100
                         ";
                 $result = mysqli_query($conn, $sql);
 
                 if (mysqli_num_rows($result) > 0) {
                     // output data of each row
                     while($row = mysqli_fetch_assoc($result)) {
-                        echo "<li><a href'#'>". "<h3>Recipe Name: " . $row["RecipeName"]. "</h3>";
-                        echo "<p>Recipe ID:" . $row["recipeid"]. "</p>";
-                        echo "<p>Gluten Free? :" . $row["gfree"]."</p>";
-                        echo "<p>Feeds? :" . $row["feeds"]."</p>";
+                        echo "<li><a href'#'>". "<h3>Recipe Name: " . $row["recipeName"]. "</h3>";
+                        echo "<p>Recipe ID:" . $row["recipeID"]. "</p>";
+                        echo "<p>Gluten Free :" . $row["gfree"] . "</p>";
+                        echo "<p>Feeds :" . $row["feeds"]."</p>";
                         echo "<p>Difficulty :" . $row["difficulty"]."</p>";
                         echo "<p>Directions :" . $row["directions"]."</p>";
                         echo "</a><a href='#'></a></li>";
