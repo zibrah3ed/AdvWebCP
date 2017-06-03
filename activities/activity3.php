@@ -54,7 +54,8 @@
 
 								echo "<H3>" . $row["teamName"] 	. "</H3>";
 								echo "<H4>" .	$row["teamMotto"] . "</h4";
-								echo "</div>";
+								echo "</div></div>";
+
 
                 if (mysqli_num_rows($result) > 0) {
                     // output data of each row
@@ -68,7 +69,7 @@
                 } else {
                     echo "0 results";
                 }
-
+								echo "</div>";
                 mysqli_close($conn);
 
                 ?>
