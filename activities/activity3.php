@@ -53,10 +53,11 @@
 
                 if (mysqli_num_rows($result) > 0) {
 
-											echo "<div class='text-center'>";
+											echo "<div class='text-center'><h2>Team Name</h2>";
 											echo "<H3>" . mysqli_fetch_assoc($result2)["teamName"] 	. "</H3>";
-											echo "<H4>" .	mysqli_fetch_assoc($result2)["teamMotto"] . "</h4";
+											echo "<p><i>" .	mysqli_fetch_assoc($result2)["teamMotto"] . "</i></p>";
 											echo "</div>";
+											echo "<h4>Team Members</h4>
 											echo "<ul data-role='listview' data-inset='true' data-theme='d'>";
 
                     // output data of each row
