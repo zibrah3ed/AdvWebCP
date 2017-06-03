@@ -53,7 +53,7 @@
 								echo "<H3>" . $row["teamName"] 	. "</H3>";
 								echo "<H4>" .	$row["teamMotto"] . "</h4";
 								echo "</div>";
-								echo "<ul data-role='listview' data-inset='true' data-theme='d'>"
+								echo "<ul data-role='listview' data-inset='true' data-theme='d'>";
 
 
                 if (mysqli_num_rows($result) > 0) {
@@ -68,7 +68,7 @@
                 } else {
                     echo "0 results";
                 }
-								
+
                 mysqli_close($conn);
 
                 ?>
