@@ -53,7 +53,7 @@
                 if (mysqli_num_rows($result) > 0) {
                     // output data of each row
                     while($row = mysqli_fetch_assoc($result)) {
-                        echo "<li><a href'#'>". "<h3>Team Name " . $row["teamName"]. "</h3>";
+                        echo "<li><a href'#'>". "<h3>Team Name --  " . $row["teamName"]. "</h3>";
 												echo "<p>Team Motto: " . $row["teamMotto"]."</p>";
                         echo "<p>First Name :" . $row["fname"]. "</p>";
                         echo "<p>Last Name :" . $row["lname"]."</p>";
