@@ -49,7 +49,7 @@
     											WHERE team_id = 55
                         ";
                 $result = mysqli_query($conn, $sql);
-								echo "<div class='text-center'>"
+								echo "<div class='text-center'>";
 
 
 								echo "<H3>" . $row["teamName"] 	. "</H3>";
