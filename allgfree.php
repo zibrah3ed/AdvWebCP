@@ -22,9 +22,15 @@
 	<body>
 		<div id="page" data-role="page" data-theme="a" >
 	<div data-role="header" data-theme="a">
-    <h1>
+		<div class="logo">
+	   		<center>
+	            	<img src="themes/images/banner.png" class="img-rounded img-responsive" width="264" height="85" alt="">
+			</center>
+	  	</div>
+
+    <h2 class="text-center">
 	     Gluten Free Recipes
-		</h1>
+		</h2>
   </div>
 				<div data-role="content" data-theme="a" >
 
