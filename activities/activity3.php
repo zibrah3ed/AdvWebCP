@@ -63,7 +63,7 @@
                 } else {
                     echo "0 results";
                 }
-								echo "</div>";
+								
                 mysqli_close($conn);
 
                 ?>
