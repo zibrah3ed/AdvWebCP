@@ -26,11 +26,6 @@
 	     User Recipes
 		</h1>
   </div>
-  <div class="logo">
-    	<center>
-        <img src="themes/images/banner.png" class="img-rounded img-responsive" width="264" height="85" alt="">
-      </center>
-   </div>
 				<div data-role="content" data-theme="a" >
 
           <div data-role="content" data-theme="a" style="max-width: 100%;">
@@ -58,10 +53,10 @@
                 if (mysqli_num_rows($result) > 0) {
                     // output data of each row
                     while($row = mysqli_fetch_assoc($result)) {
-                        echo "<li><a href'#'>". "<h3>Team Name " . $row["act3table.teamName"]. "</h3>";
-												echo "<p>Team Motto: " . $row["act3table.teamMotto"]."</p>";
-                        echo "<p>First Name :" . $row["act2table.fname"]. "</p>";
-                        echo "<p>Last Name :" . $row["act2table.lname"]."</p>";
+                        echo "<li><a href'#'>". "<h3>Team Name " . $row["teamName"]. "</h3>";
+												echo "<p>Team Motto: " . $row["teamMotto"]."</p>";
+                        echo "<p>First Name :" . $row["fname"]. "</p>";
+                        echo "<p>Last Name :" . $row["lname"]."</p>";
                         echo "</a><a href='#'></a></li>";
                     }
                 } else {
