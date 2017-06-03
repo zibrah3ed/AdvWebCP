@@ -29,8 +29,8 @@
 				<div data-role="content" data-theme="a" >
 
           <div data-role="content" data-theme="a" style="max-width: 100%;">
-              <ul data-role="listview" data-inset="true" data-theme="d">
 
+							<ul data-role="listview" data-inset="true" data-theme="d">
                 <?php
                 // Create connection
 
@@ -51,17 +51,11 @@
                 $result = mysqli_query($conn, $sql);
 								echo "<div class='text-center'>";
 
-
-								echo "<H3>" . $row["teamName"] 	. "</H3>";
-								echo "<H4>" .	$row["teamMotto"] . "</h4";
-								echo "</div></div>";
-
-
                 if (mysqli_num_rows($result) > 0) {
                     // output data of each row
                     while($row = mysqli_fetch_assoc($result)) {
-                        //echo "<li><a href'#'>"	. "<h3>Team Name --  "	. $row["teamName"]. "</h3>";
-												//echo "<p>Team Motto: "	. 												$row["teamMotto"]."</p>";
+                        echo "<li><a href'#'>"	. "<h3>Team Name --  "	. $row["teamName"]. "</h3>";
+												echo "<p>Team Motto: "	. 												$row["teamMotto"]."</p>";
                         echo "<p>First Name :"	. 												$row["fname"]. "</p>";
                         echo "<p>Last Name :"		. 												$row["lname"]."</p>";
                         echo "</a><a href='#'></a></li>";
