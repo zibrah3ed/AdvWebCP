@@ -47,8 +47,8 @@
 				// User ID hardcoded atm, login page will need to be added
 
 				    //User ID is hardcoded for now to show functionality
-				    $userID = 1633040277499;
-				    $RecipeName = (isset($_POST['recipeTitle'])    ? $_POST['recipeTitle']   : '');
+				    $users_userID = 100;
+				    $recipeName = (isset($_POST['recipeTitle'])    ? $_POST['recipeTitle']   : '');
 				    $gfree = (isset($_POST['gfree'])    ? $_POST['gfree']   : '');
 				    $feeds = (isset($_POST['feeds'])    ? $_POST['feeds']   : '');
 				    $difficulty = (isset($_POST['difficulty'])    ? $_POST['difficulty']   : '');
@@ -59,8 +59,8 @@
 
 				// Insert our data
 				$sql = "INSERT INTO recipes( userID,RecipeName,gfree,feeds,difficulty,directions)
-				  VALUES ($userID,
-									'{$RecipeName}',
+				  VALUES ($users_userID,
+									'{$recipeName}',
 									$gfree,
 									$feeds,
 									$difficulty,
