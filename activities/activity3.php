@@ -23,7 +23,7 @@
 		<div id="page" data-role="page" data-theme="a" >
 	<div data-role="header" data-theme="a">
     <h1>
-	     User Recipes
+	     Team Members
 		</h1>
   </div>
 				<div data-role="content" data-theme="a" >
@@ -49,14 +49,20 @@
     											WHERE team_id = 55
                         ";
                 $result = mysqli_query($conn, $sql);
+								echo "<div class='text-center'>"
+
+
+								echo "<H3>" . $row["teamName"] 	. "</H3>";
+								echo "<H4>" .	$row["teamMotto"] . "</h4";
+								echo "</div>";
 
                 if (mysqli_num_rows($result) > 0) {
                     // output data of each row
                     while($row = mysqli_fetch_assoc($result)) {
-                        echo "<li><a href'#'>". "<h3>Team Name --  " . $row["teamName"]. "</h3>";
-												echo "<p>Team Motto: " . $row["teamMotto"]."</p>";
-                        echo "<p>First Name :" . $row["fname"]. "</p>";
-                        echo "<p>Last Name :" . $row["lname"]."</p>";
+                        //echo "<li><a href'#'>"	. "<h3>Team Name --  "	. $row["teamName"]. "</h3>";
+												//echo "<p>Team Motto: "	. 												$row["teamMotto"]."</p>";
+                        echo "<p>First Name :"	. 												$row["fname"]. "</p>";
+                        echo "<p>Last Name :"		. 												$row["lname"]."</p>";
                         echo "</a><a href='#'></a></li>";
                     }
                 } else {
@@ -73,7 +79,7 @@
                   <!-- 	1. Required float and margin edits to render properly
                   		2. Privacy Badger blocked button rendering and had to be disabled.
                   -->
-                  <p style="float:left; margin: 0em 1em 1em 1em;">Share Recipes: </p>
+                  <p style="float:left; margin: 0em 1em 1em 1em;">Share Team Info: </p>
                   <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
                   <a class="a2a_button_twitter"></a>
                   <a class="a2a_button_facebook"></a>
