@@ -43,20 +43,26 @@
                     die("Connection failed: " . mysqli_connect_error());
                 }
                 // TEAM ID hardcoded atm,
-                $sql= "SELECT act2table.fname, act2table.lname, act2table.phone act3table.teamName,act3table.teamMotto
+                $sql= "SELECT act2table.fname, act2table.lname, act2table.phone, act3table.teamName,act3table.teamMotto
 													FROM act3table
     									INNER JOIN act2table ON act3table.teamID = act2table.team_id
     											WHERE team_id = 55
                         ";
                 $result = mysqli_query($conn, $sql);
-
+								$result2 = mysqli_query($conn, $sql);
 
                 if (mysqli_num_rows($result) > 0) {
 
+											echo "<div class='text-center'>";
+											echo "<H3>" . mysqli_fetch_assoc($result2)["teamName"] 	. "</H3>";
+											echo "<H4>" .	mysqli_fetch_assoc($result2)["teamMotto"] . "</h4";
+											echo "</div>";
+											echo "<ul data-role='listview' data-inset='true' data-theme='d'>";
+
                     // output data of each row
                     while($row = mysqli_fetch_assoc($result)) {
-                        echo "<li><a href'#'>"	. "<h3>Team Name --  "	. $row["teamName"]. "</h3>";
-												echo "<p>Team Motto: "	. 												$row["teamMotto"]."</p>";
+                        //echo "<li><a href'#'>"	. "<h3>Team Name --  "	. $row["teamName"]. "</h3>";
+												//echo "<p>Team Motto: "	. 												$row["teamMotto"]."</p>";
                         echo "<p>First Name : "	. 												$row["fname"]. "</p>";
                         echo "<p>Last Name : "		. 												$row["lname"]."</p>";
 												echo "<p>Phone : "		. 												$row["phone"]."</p>";
