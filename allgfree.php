@@ -63,7 +63,7 @@
                         //echo "<li><a href'#'>"	. "<h3>Team Name --  "	. $row["teamName"]. "</h3>";
 												//echo "<p>Team Motto: "	. 												$row["teamMotto"]."</p>";
 												echo "<li><a href'#'>";
-												echo "<p>Recipe Name: "	. 				 								$row["recipeName"]. "</p>";
+												echo "<H3>Recipe Name: "	. 				 								$row["recipeName"]. "</h3>";
 												echo "<p>Difficulty : "		. 												$row["difficulty"]."</p>";
 												echo "<p>First Name : "		. 												$row["fname"]."</p>";
 												echo "<p>Last Name : "		. 												$row["lname"]."</p>";
