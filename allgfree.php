@@ -35,7 +35,7 @@
 				<div data-role="content" data-theme="a" >
 
           <div data-role="content" data-theme="a" style="max-width: 100%;">
-						<h4>Gluten Free Recipes</h4>
+						
 						<ul data-role='listview' data-inset='true' data-theme='d'>
 
                 <?php
