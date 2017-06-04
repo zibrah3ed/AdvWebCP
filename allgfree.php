@@ -35,7 +35,7 @@
 				<div data-role="content" data-theme="a" >
 
           <div data-role="content" data-theme="a" style="max-width: 100%;">
-						
+
 						<ul data-role='listview' data-inset='true' data-theme='d'>
 
                 <?php
@@ -67,7 +67,7 @@
 												echo "<p>Difficulty : "		. 												$row["difficulty"]."</p>";
 												echo "<p>First Name : "		. 												$row["fname"]."</p>";
 												echo "<p>Last Name : "		. 												$row["lname"]."</p>";
-												echo "<p>Username "		. 												$row["username"]."</p>";
+												echo "<p>Username : "		. 												$row["username"]."</p>";
                         echo "</a><a href='#'></a></li>";
                     }
                 } else {
