@@ -38,15 +38,18 @@
 	});
 
 	function show() {
-		window.setTimeout(function () {
+    var fname = gapi.auth2.BasicProfile.getGivenName();
+    var lname = gapi.auth2.BasicProfile.getFamilyName();
+
+    window.setTimeout(function () {
 			var instance = new Notification(
 				"Notify Test", {
-					body: "This is only a test"
+					body: "Hello" + fname + " " + lname + "!"
 				}
 			);
 
 			instance.onclick = function () {
-				// Something to do
+
 			};
 			instance.onerror = function () {
 				// Something to do
