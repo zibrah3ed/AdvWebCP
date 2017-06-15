@@ -28,7 +28,36 @@
 
 <body>
 <!-- Scripts -->
+<script>
+	var Notification = window.Notification || window.mozNotification || window.webkitNotification;
 
+	Notification.requestPermission(function (permission) {
+		// console.log(permission);
+	});
+
+	function show() {
+		window.setTimeout(function () {
+			var instance = new Notification(
+				"Notify Test", {
+					body: "This is only a test"
+				}
+			);
+
+			instance.onclick = function () {
+				// Something to do
+			};
+			instance.onerror = function () {
+				// Something to do
+			};
+			instance.onshow = function () {
+				// Something to do
+			};
+			instance.onclose = function () {
+				// Something to do
+			};
+		}, 3000);
+	}
+</script>
 <!-- phonegap script -->
 <script type="text/javascript" src="cordova.js"></script>
 <!--Changed Stuff-->
@@ -68,6 +97,9 @@
                </li>
             	<li><a href="#addrecipe2" data-role="button" data-inline="true" class="mainButton" data-transition="pop">Add Recipe</a></li>
               <li><a href="allgfree.php" data-role="button" data-inline="true" class="mainButton" data-transition="pop">Gluten Free List</a></li>
+              <li>
+                <a href="#" data-role="button" data-inline="true" class="mainButton" onclick="show()">Notify me!</a>
+              </li>
 		      </center>
   		</div>
       <center>
