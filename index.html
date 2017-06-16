@@ -44,38 +44,38 @@
 			// The ID token you need to pass to your backend:
 			var id_token = googleUser.getAuthResponse().id_token;
 			console.log("ID Token: " + id_token);
-			return profile.getName();
+			var Notification = window.Notification || window.mozNotification || window.webkitNotification;
+
+			Notification.requestPermission(function (permission) {
+				// console.log(permission);
+			});
+
+			function show() {
+		    window.setTimeout(function () {
+
+					var instance = new Notification(
+						"Notify Test", {
+							body: "Hello" + profile.getGivenName() + " " + profile.getFamilyName() +"!"
+						}
+					);
+
+					instance.onclick = function () {
+		        // Woo
+					};
+					instance.onerror = function () {
+						// Something to do
+					};
+					instance.onshow = function () {
+						// Something to do
+					};
+					instance.onclose = function () {
+						// Something to do
+					};
+				}, 300);
+			}
 		};
 
-	var Notification = window.Notification || window.mozNotification || window.webkitNotification;
 
-	Notification.requestPermission(function (permission) {
-		// console.log(permission);
-	});
-
-	function show() {
-    window.setTimeout(function () {
-
-			var instance = new Notification(
-				"Notify Test", {
-					body: "Hello" + signedInUser + "!"
-				}
-			);
-
-			instance.onclick = function () {
-        // Woo
-			};
-			instance.onerror = function () {
-				// Something to do
-			};
-			instance.onshow = function () {
-				// Something to do
-			};
-			instance.onclose = function () {
-				// Something to do
-			};
-		}, 300);
-	}
 </script>
 
 <!-- phonegap script -->
