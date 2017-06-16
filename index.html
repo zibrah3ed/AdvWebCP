@@ -44,7 +44,7 @@
 			// The ID token you need to pass to your backend:
 			var id_token = googleUser.getAuthResponse().id_token;
 			console.log("ID Token: " + id_token);
-			return profile.getname();
+			return profile.getName();
 		};
 
 	var Notification = window.Notification || window.mozNotification || window.webkitNotification;
