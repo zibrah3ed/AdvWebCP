@@ -39,6 +39,7 @@
 
 	function show() {
     window.setTimeout(function () {
+			var profile = googleUser.getBasicProfile();
 			var instance = new Notification(
 				"Notify Test", {
 					body: "Hello" + profile.getName() + "!"
