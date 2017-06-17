@@ -31,6 +31,10 @@
 
 <!-- Notification Script -->
 <script>
+		// Set Welcome notifcation on page load
+
+		window.onload = show();
+
 		var profile = "";
 
 		var signedInUser = function onSignIn(googleUser) {
@@ -75,7 +79,7 @@
 				instance.onclose = function () {
 					// Something to do
 				};
-			}, 500);
+			}, 3000);
 		}
 
 
