@@ -63,7 +63,7 @@
 
 				var instance = new Notification(
 					"Welcome Message", {
-						icon: "'" + profile.getImageUrl() + "'",
+						icon: profile.getImageUrl(),
 						body: "Hello " + profile.getGivenName() + " " + profile.getFamilyName() +"!"
 					}
 				);
