@@ -16,6 +16,9 @@ h3 + p, h4 + p {
 img {
     max-width: 100%;
     height: auto;
-		display:block;
-	 	margin:auto;
+}
+
+#logo {
+	display:block;
+	margin:auto;
 }
