@@ -18,7 +18,7 @@ img {
     height: auto;
 }
 
-#logo {
+.logo {
 	display:block;
 	margin:auto;
 }
