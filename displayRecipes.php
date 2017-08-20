@@ -50,7 +50,7 @@
 
                 $sql= "SELECT *
                         FROM recipes
-                        WHERE users_userID=100
+                        WHERE users_userID=1
                         ";
                 $result = mysqli_query($conn, $sql);
 
