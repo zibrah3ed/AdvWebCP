@@ -86,7 +86,10 @@
 		}
 
 
-
+		function signOut() {
+			gapi.auth.signOut();
+		}
+}
 </script>
 
 <!-- phonegap script -->
@@ -127,6 +130,11 @@
       <center>
         <!-- Google signin button, redundant but part of assignment -->
         <div class="g-signin2" data-onsuccess="signedInUser"></div>
+				<div>
+					<button onclick='signOut()'>Sign Out</button>
+				</div>
+
+				</div>
       </center>
 	</div>
 </div>
