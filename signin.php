@@ -66,6 +66,8 @@
 
 
      }
+
+     login();
  ?>
 
   <div data-role="footer" data-position="fixed" data-fullscreen="true">
