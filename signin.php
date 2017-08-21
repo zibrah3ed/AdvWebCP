@@ -47,7 +47,7 @@
 
     $result = mysqli_query($conn,$sql);
 
-    if(!$result || mysql_num_rows($result) <= 0)
+    if(!$result || mysqli_num_rows($result) <= 0)
        {
            echo "<p>Error logging in. The username or password does not match</p>";
            return false;
