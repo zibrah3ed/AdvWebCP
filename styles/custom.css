@@ -97,3 +97,12 @@ table, th, td {
 	        width: 100%;
 	    }
 	}
+
+	.footer{
+		display: inline;
+		text-align: center;
+	}
+	footer.button {
+		display: inline;
+		float:left;
+	}

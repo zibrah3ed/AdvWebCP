@@ -120,29 +120,28 @@ function signOut() {
 	<div data-role="content">
     <div class="container" style="myButton">
   		<div data-role="controlgroup">
-      		<center>
-      			<li><a href="#recipes" class="mainButton" data-inline="true" data-role="button" data-transition="flip">Search Recipes</a></li>
+					<center>
+						<li><a href="#recipes" class="mainButton" data-inline="true" data-role="button" data-transition="flip">Search Recipes</a></li>
             	<li><a href="displayRecipes.php" class="mainButton" data-inline="true" data-role="button" data-transition="flip">My Recipes</a></li>
    	  	  		<li><a href="#mealplanner" data-role="button" data-inline="true" class="mainButton" data-transition="flip">Meal Planner</a></li>
        	  		<li><a href="#listgen" data-role="button" data-inline="true" class="mainButton">List Generator</a></li>
             	<li><a href="#addrecipe2" data-role="button" data-inline="true" class="mainButton" data-transition="pop">Add Recipe</a></li>
               <li><a href="allgfree.php" data-role="button" data-inline="true" class="mainButton" data-transition="pop">Gluten Free List</a></li>
-		      </center>
+					</center>
   		</div>
       <center>
         <!-- Google signin button, redundant but part of assignment -->
         <div class="g-signin2" data-onsuccess="signedInUser"></div>
-				<div>
-					<button onclick='signOut()'>Sign Out</button>
-				</div>
-
 				</div>
       </center>
 	</div>
-</div>
-<div data-role="footer" data-position="fixed" data-fullscreen="true">
-    <h4>Tyson Funk&copy; 2017</h4>
-  </div>
+	<!-- <div data-role="footer" data-position="fixed" data-fullscreen="true" class="footer">
+	    <p>Tyson Funk&copy; 2017</p><button onclick='signOut()' type="button" class="btn">Sign Out</button>
+	</div> -->
+<?php
+include defPageParts.php
+makeFooter();
+?>
 </div>
 
 <!--Start Recipes Page -->
