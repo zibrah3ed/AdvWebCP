@@ -97,7 +97,7 @@
   			<!-- AddToAny END -->
 
 
-    <div data-role="footer">
+    <div data-role="footer" data-position="fixed" data-fullscreen="true">
       <h4>Tyson Funk&copy; 2016</h4>
     </div>
   </div>
