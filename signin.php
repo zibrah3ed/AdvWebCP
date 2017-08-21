@@ -51,18 +51,20 @@
        {
            echo "<p>Error logging in. The username or password does not match</p>";
            return false;
+       } else {
+         echo "<p>
+         Thanks for signing in
+         </p>";
+
+         return true;
        }
 
-       $row = mysqli_fetch_assoc($result);
+      //  $row = mysqli_fetch_assoc($result);
+       //
+      //   $_SESSION['name_of_user']  = $row['name'];
+      //   $_SESSION['email_of_user'] = $row['email'];
 
-        $_SESSION['name_of_user']  = $row['name'];
-        $_SESSION['email_of_user'] = $row['email'];
 
-        echo "<p>
-        Thanks for signing in
-        </p>";
-
-        return true;
      }
  ?>
 
