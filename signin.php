@@ -60,7 +60,7 @@
 
         echo "<p>
         Thanks for signing in
-        </p>"
+        </p>";
 
         return true;
      }
