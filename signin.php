@@ -43,7 +43,7 @@
     $username = $_GET['uname'];
     $psw = $_GET['psw'];
 
-    $sql = "SELECT username, password FROM users WHERE username='$username' and password='psw'";
+    $sql = "SELECT username, password FROM users WHERE username='$username' and password='$psw'";
 
     $result = mysqli_query($conn,$sql);
 
