@@ -60,9 +60,8 @@
                 // User ID hardcoded atm, login page will need to be added
 
 								if (strlen($query) > 0){
-									$query = mysqli_real_escape_string($query);
 									$query = "%".$query."%";
-									$sql = "SELECT * from recipes where recipeName LIKE '$query'";
+									$sql = "SELECT * from recipes where recipeName ='$query'";
 								} else {
 									$sql= "SELECT *
 													FROM recipes LIMIT 5";
