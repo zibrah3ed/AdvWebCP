@@ -34,9 +34,12 @@
 				<div data-role="content" data-theme="a" >
 
 					<div data-role="fieldcontain" style="margin: 0 auto; max-width: 90%;">
-						 <label for="search" style="text-align:center;">Recipe Search:</label>
-						 <input type="search" name="search" id="search" value=""  />
-						 <input type="submit" value="Search" class="btn btn-success button-margin">
+						 <!-- <label for="search" style="text-align:center;">Recipe Search:</label>
+						 <input type="search" name="search" id="search" value=""  /> -->
+						 <form action="search.php" method="GET">
+						    <input type="text" name="query" />
+						    <input type="submit" value="Search" />
+						</form>
 					</div>
 
 				<div data-role="content" data-theme="a" style="max-width: 100%;">
@@ -75,6 +78,29 @@
                 }
 
                 mysqli_close($conn);
+
+								$query = $_GET['query'];
+
+								$query = mysqli_real_escape_string($query);
+
+								$sql2 = "SELECT * from recipes where recipeName = '$query'";
+
+								$searchResults = mysqli_query($conn,$sql2);
+
+								if (mysqli_num_rows($searchResults) > 0) {
+										// output data of each row
+										while($row = mysqli_fetch_assoc($searchResults)) {
+												echo "<li><a href'#'>". "<h3>Recipe Name: " . $row["recipeName"]. "</h3>";
+												echo "<p>Recipe ID:" . $row["recipeID"]. "</p>";
+												echo "<p>Gluten Free :" . $row["gfree"] . "</p>";
+												echo "<p>Feeds :" . $row["feeds"]."</p>";
+												echo "<p>Difficulty :" . $row["difficulty"]."</p>";
+												echo "<p>Directions :" . $row["directions"]."</p>";
+												echo "</a><a href='#'></a></li>";
+										}
+								} else {
+										echo "No recipes with that name";
+								}
 
                 ?>
         </ul>
