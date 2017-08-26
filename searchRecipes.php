@@ -60,7 +60,7 @@
                 // User ID hardcoded atm, login page will need to be added
 
 								if (strlen($query) > 0){
-									$sql = "SELECT * from recipes where recipeName ='$query'";
+									$sql = "SELECT * from recipes where recipeName ='%''$query''%'";
 								} else {
 									$sql= "SELECT *
 													FROM recipes LIMIT 5";
@@ -99,16 +99,11 @@
                   <a class="a2a_button_facebook"></a>
                   <a class="a2a_button_google_plus"></a>
                   <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true" ></div>
+									<script async src="https://static.addtoany.com/menu/page.js"></script>
+    						</div>
+			<!-- AddToAny END -->
 
-    </div>
-                  </div>
-                  <script async src="https://static.addtoany.com/menu/page.js"></script>
-  			<!-- AddToAny END -->
-
-
-    <?php createFooter(); ?>
-  </div>
-    </div>
-  </div>
+			<?php createFooter(); ?>
+      </div>
   </body>
 </html>
