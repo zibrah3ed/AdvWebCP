@@ -29,7 +29,7 @@
         	<img src="themes/images/banner.png" class="img-rounded img-responsive" width="264" height="85" alt="">
       	</center>
    		</div>
-			<div data-role="content" data-theme="a" style="max-width: 100%;">
+			<div data-role="content" data-theme="d" style="max-width: 100%;">
                 <?php
                 // Create connection
 
@@ -47,7 +47,6 @@
                 $result = mysqli_query($conn, $sql);
 
 								//Create Table Header
-								echo "<div class=myTable";
 								echo "<center><table data-role='table' class='ui-responsive ui-shadow' data-theme='d'>";
 								echo "<thead>";
 								echo "<tr><th colspan='3'>Recipe Name ".$row["recipename"]."</th></tr>";
@@ -60,7 +59,7 @@
                 if (mysqli_num_rows($result) > 0) {
 									//	Fill table with every row retruned by query
                     while($row = mysqli_fetch_assoc($result)) {
-                        echo "<tr>";
+                        echo "<tr data-theme='c'>";
 												echo "<td>".$row["ing_name"]."</td>";
 												echo "<td>".$row["quantity"]."</td>";
 												echo "<td>".$row["uom"]."</td>";
@@ -81,7 +80,7 @@
 								</tbody>
 							</table>
 						</center>
-					</div>
+
 				</div>
 
 
