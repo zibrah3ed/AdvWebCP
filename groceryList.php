@@ -49,23 +49,18 @@
 
                 $result = mysqli_query($conn, $sql);
 
+								//Create Table Header
+								echo "<div class='table-responsive>'";
+								echo "<table class='table-striped'>";
+								echo "<tr><th colspan='3'>Recipe Name ".$row["recipeName"]."</th></tr>";
+								echo "<tr>
+												<th>Ingredient</th>
+												<th>Qty.</th>
+												<th>UoM</th>
+											</tr>";
+											
                 if (mysqli_num_rows($result) > 0) {
-										echo "<div class='table-responsive>'";
-										echo "<table class='table-striped'>";
-										echo "<tr><th colspan='3'>Recipe Name ".$row["recipeName"]."</th></tr>";
-										echo "<tr>
-										<th>
-										Ingredient
-										</th>
-										<th>
-										Qty.
-										</th>
-										<th>
-										UoM
-										</th>
-										</tr>";
-
-										echo "</table></div>";
+									//	Fill table with every row retruned by query
                     while($row = mysqli_fetch_assoc($result)) {
                         echo "<tr>";
 												echo "<td>".$row["ing_name"]."</td>";
@@ -74,13 +69,16 @@
 												echo "</tr>";
                     }
                 } else {
+										// Insert error message when a null result is return from the query
                     echo "<tr>
 										<td colspan='3'>
 										Error
 										</td>
 										</tr>";
                 }
-
+								// End Table
+								echo "</table></div>";
+								// Close Connection
                 mysqli_close($conn);
                 ?>
         </ul>
