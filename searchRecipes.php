@@ -23,7 +23,7 @@
 		<div id="page" data-role="page" data-theme="a" >
 	<div data-role="header" data-theme="a">
     <h1>
-	     User Recipes
+	     Recipe Search
 		</h1>
   </div>
   <div class="logo">
@@ -36,6 +36,7 @@
 					<div data-role="fieldcontain" style="margin: 0 auto; max-width: 90%;">
 						 <label for="search" style="text-align:center;">Recipe Search:</label>
 						 <input type="search" name="search" id="search" value=""  />
+						 <input type="submit" value="Search" class="btn btn-success button-margin">
 					</div>
 
 				<div data-role="content" data-theme="a" style="max-width: 100%;">
@@ -54,7 +55,7 @@
                 // User ID hardcoded atm, login page will need to be added
 
                 $sql= "SELECT *
-                        FROM recipes";
+                        FROM recipes LIMIT 5";
 
                 $result = mysqli_query($conn, $sql);
 
