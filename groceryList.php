@@ -46,10 +46,11 @@
 
                 $result = mysqli_query($conn, $sql);
 
+
 								//Create Table Header
 								echo "<center><table data-role='table' class='ui-responsive ui-shadow' data-theme='d' style='margin-top:2%;'>";
 								echo "<thead>";
-								echo "<tr><th colspan='3'>Recipe Name ".$row["recipesrecipename"]."</th></tr>";
+								echo "<tr><th colspan='3'>Recipe Name ".$result["recipesrecipename"]."</th></tr>";
 								echo "<tr>
 												<th>Ingredient</th>
 												<th>Qty.</th>
