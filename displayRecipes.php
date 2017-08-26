@@ -40,6 +40,7 @@
 
                 include 'config.php';
                 include 'opendb.php';
+								include 'defaultPageParts.php';
 								$userID = 1;
 
 
@@ -92,10 +93,7 @@
                   <script async src="https://static.addtoany.com/menu/page.js"></script>
   			<!-- AddToAny END -->
 
-
-				<div data-role="footer" data-position="fixed" data-fullscreen="true" class="footer">
-				    <p>Tyson Funk&copy; 2017</p><button onclick='signOut()' type="button" class="btn">Sign Out</button>
-				</div>
+				<?php createFooter(); ?>
   </div>
     </div>
   </div>
