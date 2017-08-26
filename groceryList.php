@@ -42,7 +42,7 @@
 								$sql = "SELECT ing_name, quantity, uom, recipes.recipeName
 												FROM `ingredients`
 												INNER JOIN recipes ON recipes_recipeID = recipes.recipeID
-												WHERE recipes_recipeID = 2";
+												WHERE recipes_recipeID = 12";
 
                 $result = mysqli_query($conn, $sql);
 
