@@ -40,6 +40,7 @@
 
                 include 'config.php';
                 include 'opendb.php';
+								$userID = 1;
 
 
                 // Check connection
@@ -50,7 +51,7 @@
 
                 $sql= "SELECT *
                         FROM recipes
-                        WHERE users_userID=1
+                        WHERE users_userID = $userID
                         ";
                 $result = mysqli_query($conn, $sql);
 
