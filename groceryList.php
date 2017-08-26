@@ -47,7 +47,7 @@
                 $result = mysqli_query($conn, $sql);
 
 								//Create Table Header
-								echo "<table class='ui-responsive' data-theme='D'>";
+								echo "<table data-role='table' class='ui-responsive' data-theme='D'>";
 								echo "<thead>";
 								echo "<tr><th colspan='3'>Recipe Name ".$row["recipeName"]."</th></tr>";
 								echo "<tr>
