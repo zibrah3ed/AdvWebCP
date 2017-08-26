@@ -23,7 +23,7 @@
 		<div id="page" data-role="page" data-theme="a" >
 	<div data-role="header" data-theme="a">
     <h1>
-	     User Recipes
+	     Recipe Search
 		</h1>
   </div>
   <div class="logo">
@@ -33,26 +33,39 @@
    </div>
 				<div data-role="content" data-theme="a" >
 
-          <div data-role="content" data-theme="a" style="max-width: 100%;">
+					<div data-role="fieldcontain" style="margin: 0 auto; max-width: 90%;">
+						<form action="searchRecipes.php"
+						 <label for="search" style="text-align:center;">Recipe Search:</label>
+						 <input type="search" name="query" id="search" value="recipe name" />
+					 </form>
+							</div>
+
+					</div>
+
+				<div data-role="content" data-theme="a" style="max-width: 100%;">
               <ul data-role="listview" data-inset="true" data-theme="d">
                 <?php
                 // Create connection
 
                 include 'config.php';
                 include 'opendb.php';
-								$userID = 1;
+								include 'defaultPageParts.php';
 
+								$query = $_GET['query'];
 
                 // Check connection
                 if (!$conn) {
                     die("Connection failed: " . mysqli_connect_error());
                 }
-                // User ID hardcoded atm, login page will need to be added
+                // Check for input, string will be empty on first run(i.e. Navigations)
 
-                $sql= "SELECT *
-                        FROM recipes
-                        WHERE users_userID = $userID
-                        ";
+								if (strlen($query) > 0){
+									$sql = "SELECT * from recipes where recipeName ='$query'";
+								} else {
+									$sql= "SELECT *
+													FROM recipes LIMIT 5";
+								}
+
                 $result = mysqli_query($conn, $sql);
 
                 if (mysqli_num_rows($result) > 0) {
@@ -67,11 +80,15 @@
                         echo "</a><a href='#'></a></li>";
                     }
                 } else {
-                    echo "0 results";
+                    echo "<li>
+										<h3>0 results</h3>
+										<p>
+										Try again.
+										</p>
+										</li>";
                 }
 
                 mysqli_close($conn);
-
                 ?>
         </ul>
       </div>
@@ -86,18 +103,11 @@
                   <a class="a2a_button_facebook"></a>
                   <a class="a2a_button_google_plus"></a>
                   <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true" ></div>
+									<script async src="https://static.addtoany.com/menu/page.js"></script>
+    						</div>
+			<!-- AddToAny END -->
 
-    </div>
-                  </div>
-                  <script async src="https://static.addtoany.com/menu/page.js"></script>
-  			<!-- AddToAny END -->
-
-
-				<div data-role="footer" data-position="fixed" data-fullscreen="true" class="footer">
-				    <p>Tyson Funk&copy; 2017</p><button onclick='signOut()' type="button" class="btn">Sign Out</button>
-				</div>
-  </div>
-    </div>
-  </div>
+			<?php createFooter(); ?>
+      </div>
   </body>
 </html>

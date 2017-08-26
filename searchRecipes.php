@@ -80,7 +80,12 @@
                         echo "</a><a href='#'></a></li>";
                     }
                 } else {
-                    echo "0 results";
+									echo "<li>
+									<h3>0 results</h3>
+									<p>
+									Try again.
+									</p>
+									</li>";
                 }
 
                 mysqli_close($conn);
