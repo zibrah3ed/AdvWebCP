@@ -47,9 +47,9 @@
                 $result = mysqli_query($conn, $sql);
 
 								//Create Table Header
-								echo "<center><table data-role='table' class='ui-responsive myTable' data-theme='d'>";
+								echo "<center><table data-role='table' class='ui-responsive ui-shadow myTable' data-theme='d'>";
 								echo "<thead>";
-								echo "<tr><th colspan='3'>Recipe Name ".$row["recipes.recipeName"]."</th></tr>";
+								echo "<tr><th colspan='3'>Recipe Name ".$row["recipename"]."</th></tr>";
 								echo "<tr>
 												<th>Ingredient</th>
 												<th>Qty.</th>
@@ -77,11 +77,10 @@
 								// Close Connection
                 mysqli_close($conn);
                 ?>
-								// End Table
 								</tbody>
 							</table>
 						</center>
-					</div>";
+					</div>
       <!-- AddToAny BEGIN Code adapted from code provided by https://www.addtoany.com/buttons/for/website -->
                   <div class="a2a_kit a2a_kit_size_32 a2a_default_style text-center">
                   <!-- 	1. Required float and margin edits to render properly
