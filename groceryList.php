@@ -29,7 +29,7 @@
         	<img src="themes/images/banner.png" class="img-rounded img-responsive" width="264" height="85" alt="">
       	</center>
    		</div>
-			<div data-role="content" data-theme="d" style="max-width: 100%;">
+			<div data-role="content" data-theme="d" style="max-width: 100%; margin-top: 2%;">
                 <?php
                 // Create connection
 
@@ -47,7 +47,7 @@
                 $result = mysqli_query($conn, $sql);
 
 								//Create Table Header
-								echo "<center><table data-role='table' class='ui-responsive ui-shadow' data-theme='d'>";
+								echo "<center><table data-role='table' class='ui-responsive ui-shadow' data-theme='d' style='margin-top:2%;'>";
 								echo "<thead>";
 								echo "<tr><th colspan='3'>Recipe Name ".$row["recipesrecipename"]."</th></tr>";
 								echo "<tr>
