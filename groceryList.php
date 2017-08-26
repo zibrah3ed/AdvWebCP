@@ -46,16 +46,31 @@
 
                 $result = mysqli_query($conn, $sql);
 
+								if (mysqli_num_rows($result) > 0) {
+											//Create Table Header
+												echo "<center><table data-role='table' class='ui-responsive ui-shadow' data-theme='d' style='margin-top:2%;'>";
+												echo "<thead>";
+												echo "<tr><th colspan='3'>Recipe Name ".$result["recipename"]."</th></tr>";
+												echo "<tr>
+																<th>Ingredient</th>
+																<th>Qty.</th>
+																<th>UoM</th>
+															</tr></thead><tbody>";
+											} else {
+												echo "<center><table data-role='table' class='ui-responsive ui-shadow' data-theme='d' style='margin-top:2%;'>";
+												echo "<thead>";
+												echo "<tr><th colspan='3'>No Results</th></tr>";
+												echo "<tr>
+																<th>Ingredient</th>
+																<th>Qty.</th>
+																<th>UoM</th>
+															</tr></thead><tbody>";
+											}
 
-								//Create Table Header
-								echo "<center><table data-role='table' class='ui-responsive ui-shadow' data-theme='d' style='margin-top:2%;'>";
-								echo "<thead>";
-								echo "<tr><th colspan='3'>Recipe Name ".$result["recipesrecipename"]."</th></tr>";
-								echo "<tr>
-												<th>Ingredient</th>
-												<th>Qty.</th>
-												<th>UoM</th>
-											</tr></thead><tbody>";
+										mysqli_close($conn);
+
+
+								$result = mysqli_query($conn, $sql);
 
                 if (mysqli_num_rows($result) > 0) {
 									//	Fill table with every row retruned by query
@@ -82,25 +97,9 @@
 							</table>
 						</center>
 
-				</div>
-
-
-      <!-- AddToAny BEGIN Code adapted from code provided by https://www.addtoany.com/buttons/for/website -->
-                  <div class="a2a_kit a2a_kit_size_32 a2a_default_style text-center">
-                  <!-- 	1. Required float and margin edits to render properly
-                  		2. Privacy Badger blocked button rendering and had to be disabled.
-                  -->
-                  <p style="float:left; margin: 0em 1em 1em 1em;">Share Recipes: </p>
-                  <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
-                  <a class="a2a_button_twitter"></a>
-                  <a class="a2a_button_facebook"></a>
-                  <a class="a2a_button_google_plus"></a>
-                  <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true" ></div>
-									<script async src="https://static.addtoany.com/menu/page.js"></script>
-    						</div>
-			<!-- AddToAny END -->
-
+				</div
 			<?php createFooter(); ?>
       </div>
+		</div>
   </body>
 </html>
