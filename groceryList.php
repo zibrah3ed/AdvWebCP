@@ -49,7 +49,7 @@
 								//Create Table Header
 								echo "<center><table data-role='table' class='ui-responsive ui-shadow' data-theme='d'>";
 								echo "<thead>";
-								echo "<tr><th colspan='3'>Recipe Name ".$row["recipename"]."</th></tr>";
+								echo "<tr><th colspan='3'>Recipe Name ".$row["recipesrecipename"]."</th></tr>";
 								echo "<tr>
 												<th>Ingredient</th>
 												<th>Qty.</th>
