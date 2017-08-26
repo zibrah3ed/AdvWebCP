@@ -36,7 +36,8 @@ li.beautifytop{
 }
 
 table, th, td {
-		border: 1px solid white;
+		margin-top: 5%;
+		border: 1px solid #D6D6D6;
 		border-collapse: collapse;
 		padding: 5px;
 
