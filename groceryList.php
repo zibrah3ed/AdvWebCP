@@ -48,9 +48,10 @@
 
 								if (mysqli_num_rows($result) > 0) {
 											//Create Table Header
+												$row = mysqli_fetch_assoc($result);
 												echo "<center><table data-role='table' class='ui-responsive ui-shadow' data-theme='d' style='margin-top:2%;'>";
 												echo "<thead>";
-												echo "<tr><th colspan='3'>Recipe Name ".$result["recipename"]."</th></tr>";
+												echo "<tr><th colspan='3'>Recipe Name ".$row["recipeName"]."</th></tr>";
 												echo "<tr>
 																<th>Ingredient</th>
 																<th>Qty.</th>
@@ -96,10 +97,9 @@
 								</tbody>
 							</table>
 						</center>
-
 				</div
-			<?php createFooter(); ?>
       </div>
+			<?php createFooter(); ?>
 		</div>
   </body>
 </html>
