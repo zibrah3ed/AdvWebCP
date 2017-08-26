@@ -47,14 +47,15 @@
                 $result = mysqli_query($conn, $sql);
 
 								//Create Table Header
-								echo "<div class='table-responsive>'";
-								echo "<table class='table-striped'>";
+								echo "<div class='myTable'>";
+								echo "<table class='table-striped ui-responsive'>";
+								echo "<thead>";
 								echo "<tr><th colspan='3'>Recipe Name ".$row["recipeName"]."</th></tr>";
 								echo "<tr>
 												<th>Ingredient</th>
 												<th>Qty.</th>
 												<th>UoM</th>
-											</tr>";
+											</tr></thead><tbody>";
 
                 if (mysqli_num_rows($result) > 0) {
 									//	Fill table with every row retruned by query
@@ -74,7 +75,7 @@
 										</tr>";
                 }
 								// End Table
-								echo "</table></div>";
+								echo "</tbody></table></div>";
 								// Close Connection
                 mysqli_close($conn);
                 ?>
