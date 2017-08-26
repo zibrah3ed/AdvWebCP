@@ -42,7 +42,7 @@
 
 					</div>
 
-				<div data-role="content" data-theme="a" style="max-width: 100%;">
+				<div data-role="content" data-theme="a" style="max-width: 90%;">
               <ul data-role="listview" data-inset="true" data-theme="d">
                 <?php
                 // Create connection
