@@ -57,15 +57,14 @@
                 if (!$conn) {
                     die("Connection failed: " . mysqli_connect_error());
                 }
-                // User ID hardcoded atm, login page will need to be added
+                // Check for input, string will be empty on first run(i.e. Navigations)
 
 								if (strlen($query) > 0){
-									$sql = "SELECT * from recipes where recipeName ='%''$query''%'";
+									$sql = "SELECT * from recipes where recipeName ='$query'";
 								} else {
 									$sql= "SELECT *
 													FROM recipes LIMIT 5";
 								}
-
 
                 $result = mysqli_query($conn, $sql);
 
