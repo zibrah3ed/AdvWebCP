@@ -29,7 +29,7 @@
         	<img src="themes/images/banner.png" class="img-rounded img-responsive" width="264" height="85" alt="">
       	</center>
    		</div>
-			<div data-role="content" data-theme="d" style="max-width: 100%; margin-top: 2%; padding-top: 2%; padding-bottom:2%;">
+			<div data-role="content" data-theme="d" style="max-width: 100%; margin-top: 2%; padding-top: 2%; padding-bottom:2%; background-color: #DCDCDC">
                 <?php
                 // Create connection
 
