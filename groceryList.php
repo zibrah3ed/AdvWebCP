@@ -21,18 +21,15 @@
 
 	<body>
 		<div id="page" data-role="page" data-theme="a" >
-	<div data-role="header" data-theme="a">
-    <h1>
-	     Recipe Search
-		</h1>
-  </div>
-  <div class="logo">
-    	<center>
-        <img src="themes/images/banner.png" class="img-rounded img-responsive" width="264" height="85" alt="">
-      </center>
-   </div>
-				<div data-role="content" data-theme="a" style="max-width: 100%;">
-              <ul data-role="listview" data-inset="true" data-theme="d">
+			<div data-role="header" data-theme="a">
+    		<h1>Ingredient List</h1>
+  		</div>
+  		<div class="logo">
+    		<center>
+        	<img src="themes/images/banner.png" class="img-rounded img-responsive" width="264" height="85" alt="">
+      	</center>
+   		</div>
+			<div data-role="content" data-theme="a" style="max-width: 100%;">
                 <?php
                 // Create connection
 
@@ -58,7 +55,7 @@
 												<th>Qty.</th>
 												<th>UoM</th>
 											</tr>";
-											
+
                 if (mysqli_num_rows($result) > 0) {
 									//	Fill table with every row retruned by query
                     while($row = mysqli_fetch_assoc($result)) {
@@ -81,7 +78,6 @@
 								// Close Connection
                 mysqli_close($conn);
                 ?>
-        </ul>
       </div>
       <!-- AddToAny BEGIN Code adapted from code provided by https://www.addtoany.com/buttons/for/website -->
                   <div class="a2a_kit a2a_kit_size_32 a2a_default_style text-center">
