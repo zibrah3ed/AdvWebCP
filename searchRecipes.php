@@ -34,10 +34,12 @@
 				<div data-role="content" data-theme="a" >
 
 					<div data-role="fieldcontain" style="margin: 0 auto; max-width: 90%;">
+						<form action="searchRecipes.php"
 						 <label for="search" style="text-align:center;">Recipe Search:</label>
-						 <input type="search" name="query" id="search" value="Search" /> 
-				      </div>
-						
+						 <input type="search" name="query" id="search" value="Search" />
+					 </form>
+							</div>
+
 					</div>
 
 				<div data-role="content" data-theme="a" style="max-width: 100%;">
