@@ -31,17 +31,6 @@
         <img src="themes/images/banner.png" class="img-rounded img-responsive" width="264" height="85" alt="">
       </center>
    </div>
-				<div data-role="content" data-theme="a" >
-
-					<div data-role="fieldcontain" style="margin: 0 auto; max-width: 90%;">
-						<form action="searchRecipes.php"
-						 <label for="search" style="text-align:center;">Recipe Search:</label>
-						 <input type="search" name="query" id="search" value="recipe name" />
-					 </form>
-							</div>
-
-					</div>
-
 				<div data-role="content" data-theme="a" style="max-width: 100%;">
               <ul data-role="listview" data-inset="true" data-theme="d">
                 <?php
@@ -51,41 +40,45 @@
                 include 'opendb.php';
 								include 'defaultPageParts.php';
 
-								$query = $_GET['query'];
+								$query = 2; // Recipe ID
 
-                // Check connection
-                if (!$conn) {
-                    die("Connection failed: " . mysqli_connect_error());
-                }
-                // Check for input, string will be empty on first run(i.e. Navigations)
-
-								if (strlen($query) > 0){
-									$sql = "SELECT * from recipes where recipeName ='$query'";
-								} else {
-									$sql= "SELECT *
-													FROM recipes LIMIT 5";
-								}
+								$sql = "SELECT ing_name, quantity, uom, recipes.recipeName
+												FROM `ingredients`
+												INNER JOIN recipes ON recipes_recipeID = recipes.recipeID
+												WHERE recipes_recipeID = 2";
 
                 $result = mysqli_query($conn, $sql);
 
                 if (mysqli_num_rows($result) > 0) {
-                    // output data of each row
+										echo "<div class='table-responsive>'";
+										echo "<table class='table-striped'>";
+										echo "<tr><th colspan='3'>Recipe Name ".$row["recipeName"]."</th></tr>";
+										echo "<tr>
+										<th>
+										Ingredient
+										</th>
+										<th>
+										Qty.
+										</th>
+										<th>
+										UoM
+										</th>
+										</tr>";
+
+										echo "</table></div>";
                     while($row = mysqli_fetch_assoc($result)) {
-                        echo "<li><a href'#'>". "<h3>Recipe Name: " . $row["recipeName"]. "</h3>";
-                        echo "<p>Recipe ID:" . $row["recipeID"]. "</p>";
-                        echo "<p>Gluten Free :" . $row["gfree"] . "</p>";
-                        echo "<p>Feeds :" . $row["feeds"]."</p>";
-                        echo "<p>Difficulty :" . $row["difficulty"]."</p>";
-                        echo "<p>Directions :" . $row["directions"]."</p>";
-                        echo "</a><a href='#'></a></li>";
+                        echo "<tr>";
+												echo "<td>".$row["ing_name"]."</td>";
+												echo "<td>".$row["quantity"]."</td>";
+												echo "<td>".$row["uom"]."</td>";
+												echo "</tr>";
                     }
                 } else {
-                    echo "<li>
-										<h3>0 results</h3>
-										<p>
-										Try again.
-										</p>
-										</li>";
+                    echo "<tr>
+										<td colspan='3'>
+										Error
+										</td>
+										</tr>";
                 }
 
                 mysqli_close($conn);
