@@ -29,7 +29,8 @@
         	<img src="themes/images/banner.png" class="img-rounded img-responsive" width="264" height="85" alt="">
       	</center>
    		</div>
-			<div data-role="content" data-theme="d" style="max-width: 100%;">
+			<div data-role="content" data-theme="a" style="max-width: 100%;">
+				<div data-role="content" data-theme="d" style="max-width: 90%;">
                 <?php
                 // Create connection
 
@@ -80,6 +81,7 @@
 								</tbody>
 							</table>
 						</center>
+					</div>
 					</div>
       <!-- AddToAny BEGIN Code adapted from code provided by https://www.addtoany.com/buttons/for/website -->
                   <div class="a2a_kit a2a_kit_size_32 a2a_default_style text-center">
