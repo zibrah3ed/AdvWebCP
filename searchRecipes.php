@@ -43,7 +43,8 @@
 					</div>
 
 				<div data-role="content" data-theme="a" style="max-width: 90%;">
-              <ul data-role="listview" data-inset="true" data-theme="d">
+              <center>
+								<ul data-role="listview" data-inset="true" data-theme="d">
                 <?php
                 // Create connection
 
@@ -91,6 +92,7 @@
                 mysqli_close($conn);
                 ?>
         </ul>
+				</center>
       </div>
       <!-- AddToAny BEGIN Code adapted from code provided by https://www.addtoany.com/buttons/for/website -->
                   <div class="a2a_kit a2a_kit_size_32 a2a_default_style text-center">
