@@ -33,7 +33,12 @@
    </div>
 				<div data-role="content" data-theme="a" >
 
-          <div data-role="content" data-theme="a" style="max-width: 100%;">
+					<div data-role="fieldcontain" style="margin: 0 auto; max-width: 90%;">
+						 <label for="search" style="text-align:center;">Recipe Search:</label>
+						 <input type="search" name="search" id="search" value=""  />
+					</div>
+
+				<div data-role="content" data-theme="a" style="max-width: 100%;">
               <ul data-role="listview" data-inset="true" data-theme="d">
                 <?php
                 // Create connection
@@ -41,8 +46,6 @@
                 include 'config.php';
                 include 'opendb.php';
 								include 'defaultPageParts.php';
-								$userID = 1;
-
 
                 // Check connection
                 if (!$conn) {
@@ -51,9 +54,8 @@
                 // User ID hardcoded atm, login page will need to be added
 
                 $sql= "SELECT *
-                        FROM recipes
-                        WHERE users_userID = $userID
-                        ";
+                        FROM recipes";
+
                 $result = mysqli_query($conn, $sql);
 
                 if (mysqli_num_rows($result) > 0) {
@@ -94,7 +96,7 @@
   			<!-- AddToAny END -->
 
 
-    <?php createFooter; ?>
+    <?php createFooter(); ?>
   </div>
     </div>
   </div>

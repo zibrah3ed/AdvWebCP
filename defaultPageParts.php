@@ -4,3 +4,17 @@ function createFooter() {
       <p>Tyson Funk&copy; 2017</p><button onclick='signOut()' type='button' class='btn'>Sign Out</button>
   </div>";
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+?>
