@@ -60,7 +60,6 @@
                 // User ID hardcoded atm, login page will need to be added
 
 								if (strlen($query) > 0){
-									$query = "%".$query."%";
 									$sql = "SELECT * from recipes where recipeName ='$query'";
 								} else {
 									$sql= "SELECT *
