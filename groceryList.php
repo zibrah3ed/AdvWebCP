@@ -83,7 +83,7 @@
 										// Insert error message when a null result is return from the query
                     echo "<tr>
 										<td colspan='3'>
-										Error
+										User meal plan is empty <a href='index.html'> Main Page.</a>
 										</td>
 										</tr>";
                 }
