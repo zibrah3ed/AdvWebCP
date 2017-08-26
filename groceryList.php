@@ -68,9 +68,6 @@
 															</tr></thead><tbody>";
 											}
 
-										mysqli_close($conn);
-
-
 								$result = mysqli_query($conn, $sql);
 
                 if (mysqli_num_rows($result) > 0) {
