@@ -47,7 +47,8 @@
                 $result = mysqli_query($conn, $sql);
 
 								//Create Table Header
-								echo "<center><table data-role='table' class='ui-responsive ui-shadow myTable' data-theme='d'>";
+								echo "<div class=myTable";
+								echo "<center><table data-role='table' class='ui-responsive ui-shadow' data-theme='d'>";
 								echo "<thead>";
 								echo "<tr><th colspan='3'>Recipe Name ".$row["recipename"]."</th></tr>";
 								echo "<tr>
@@ -81,6 +82,8 @@
 							</table>
 						</center>
 					</div>
+				</div>
+
 
       <!-- AddToAny BEGIN Code adapted from code provided by https://www.addtoany.com/buttons/for/website -->
                   <div class="a2a_kit a2a_kit_size_32 a2a_default_style text-center">

@@ -106,4 +106,19 @@ table, th, td {
 		display: inline;
 		float:left;
 	}
-.logo {margin-bottom: 5%;}
+.logo {
+	margin-bottom: 5%;
+}
+.myTable, table {font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+	}
+.myTable,td,th {
+	border: 1px solid #dddddd;
+	 text-align: left;
+	 padding: 8px;
+}
+
+.myTable, tr:nth-child(even) {
+    background-color: #dddddd;
+}
