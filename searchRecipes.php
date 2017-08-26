@@ -83,7 +83,7 @@
 
 								$query = mysqli_real_escape_string($query);
 
-								$sql2 = "SELECT * from recipes where recipeName = '$query'";
+								$sql2 = "SELECT * from recipes where recipeName LIKE '%".$query."%' ";
 
 								$searchResults = mysqli_query($conn,$sql2);
 
@@ -101,6 +101,8 @@
 								} else {
 										echo "No recipes with that name";
 								}
+
+								mysqli_close($conn);
 
                 ?>
         </ul>
