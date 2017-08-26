@@ -21,15 +21,24 @@
 
 	<body>
 		<div id="page" data-role="page" data-theme="a" >
-			<div data-role="header" data-theme="a">
-    		<h1>Ingredient List</h1>
-  		</div>
-  		<div class="logo">
-    		<center>
-        	<img src="themes/images/banner.png" class="img-rounded img-responsive" width="264" height="85" alt="">
-      	</center>
-   		</div>
-			<div data-role="content" data-theme="a" style="max-width: 100%;">
+	<div data-role="header" data-theme="a">
+		<div class="logo">
+	   		<center>
+	            	<img src="themes/images/banner.png" class="img-rounded img-responsive" width="264" height="85" alt="">
+			</center>
+	  	</div>
+
+    <h2 class="text-center">
+	     Ingredient List
+		</h2>
+  </div>
+				<div data-role="content" data-theme="a" >
+
+          <div data-role="content" data-theme="a" style="max-width: 100%;">
+
+						<ul data-role='listview' data-inset='true' data-theme='d'>
+						<li>
+
                 <?php
                 // Create connection
 
@@ -46,9 +55,7 @@
 
                 $result = mysqli_query($conn, $sql);
 
-								//Create Table Header
-								echo "<div class=myTable";
-								echo "<center><table data-role='table' class='ui-responsive ui-shadow' data-theme='d'>";
+                echo "<center><table data-role='table' class='ui-responsive ui-shadow' data-theme='d'>";
 								echo "<thead>";
 								echo "<tr><th colspan='3'>Recipe Name ".$row["recipename"]."</th></tr>";
 								echo "<tr>
@@ -81,26 +88,15 @@
 								</tbody>
 							</table>
 						</center>
-					</div>
-				</div>
-
-
-      <!-- AddToAny BEGIN Code adapted from code provided by https://www.addtoany.com/buttons/for/website -->
-                  <div class="a2a_kit a2a_kit_size_32 a2a_default_style text-center">
-                  <!-- 	1. Required float and margin edits to render properly
-                  		2. Privacy Badger blocked button rendering and had to be disabled.
-                  -->
-                  <p style="float:left; margin: 0em 1em 1em 1em;">Share Recipes: </p>
-                  <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
-                  <a class="a2a_button_twitter"></a>
-                  <a class="a2a_button_facebook"></a>
-                  <a class="a2a_button_google_plus"></a>
-                  <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true" ></div>
-									<script async src="https://static.addtoany.com/menu/page.js"></script>
-    						</div>
-			<!-- AddToAny END -->
-
-			<?php createFooter(); ?>
+						<li>
+        </ul>
       </div>
+    <?php
+    	include 'defaultPageParts.php';
+    	createFooter();
+    ?>
+  </div>
+    </div>
+  </div>
   </body>
 </html>
