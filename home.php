@@ -119,7 +119,6 @@ function signOut() {
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-
 <div id="main_page" data-role="page" data-theme="a">
       <div data-role="header">
         <h1>Grocery Getter</h1>
