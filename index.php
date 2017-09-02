@@ -62,32 +62,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Grocery Getter</title>
-<!-- Jquery header data -->
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<link href="https://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" rel="stylesheet" type="text/css"/>
-<link href="styles/custom.css" rel="stylesheet" type="text/css">
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-<script src="https://code.jquery.com/jquery-1.8.3.min.js" type="text/javascript"></script>
-<script src="https://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js" type="text/javascript"></script>
-<script src="javascript/storage.js"></script>
-
-<!-- Google Login -->
-<meta name="google-signin-client_id" content="581882503556-jbvkik4j01gng4cm05sgcabftpkaov2u.apps.googleusercontent.com">
-<script src="https://apis.google.com/js/platform.js" async defer></script>
-
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
-<link rel="icon" href="images/favicon.png">
+<title>Coding Cage - Login & Registration System</title>
+<link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css"  />
+<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 <body>
-<div id="main_page" data-role="page" data-theme="a">
+
 <div class="container">
 <? createLogo(); ?>
  <div id="login-form">
@@ -154,7 +134,7 @@
     </div>
 
 </div>
-</div>
+
 </body>
 </html>
 <?php ob_end_flush(); ?>
