@@ -15,13 +15,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>Welcome - <?php echo $userRow['userEmail']; ?></title>
-<link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css"  />
-<link rel="stylesheet" href="style.css" type="text/css" />
-</head>
-<body>
+<!-- Jquery header data -->
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link href="https://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" rel="stylesheet" type="text/css"/>
+<link href="styles/custom.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<script src="https://code.jquery.com/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="https://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js" type="text/javascript"></script>
+<script src="javascript/storage.js"></script>
 
+<!-- Google Login -->
+<meta name="google-signin-client_id" content="581882503556-jbvkik4j01gng4cm05sgcabftpkaov2u.apps.googleusercontent.com">
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<body>
+  <div id="main_page" data-role="page" data-theme="a">
+    <div data-role="header">
+      <h1>Grocery Getter</h1>
+      </div>
+  <div class="logo">
+        <center>
+            <img src="themes/images/banner.png" class="img-rounded img-responsive" width="264" height="85" alt="">
+      </center>
+      </div>
  <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
