@@ -2,7 +2,7 @@
  ob_start();
  session_start();
  include 'config.php';
- require_once 'dbconnect.php';
+ require_once 'opendb.php';
 
  // if session is not set this will redirect to login page
  if( !isset($_SESSION['user']) ) {

@@ -5,7 +5,7 @@
   header("Location: home.php");
  }
  include 'config.php';
- include_once 'dbconnect.php';
+ include_once 'opendb.php';
 
  $error = false;
 
