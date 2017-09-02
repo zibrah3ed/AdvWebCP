@@ -147,6 +147,10 @@
     </div>
 
 </div>
+<div data-role="footer" data-position="fixed" >
+  <!-- data-fullscreen="true" -->
+  <h4>Tyson Funk&copy; 2017</h4>
+</div>
 </div>
 </body>
 </html>
