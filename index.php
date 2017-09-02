@@ -73,7 +73,15 @@
 
 </head>
 <body>
-
+<div id="main_page" data-role="page" data-theme="a">
+  <div data-role="header">
+    <h1>Grocery Getter</h1>
+    </div>
+<div class="logo">
+      <center>
+          <img src="themes/images/banner.png" class="img-rounded img-responsive" width="264" height="85" alt="">
+    </center>
+    </div>
 <div class="container">
 
  <div id="login-form">
@@ -139,7 +147,7 @@
     </div>
 
 </div>
-
+</div>
 </body>
 </html>
 <?php ob_end_flush(); ?>
