@@ -149,8 +149,10 @@
 </div>
 <div data-role="footer" data-position="fixed" >
   <!-- data-fullscreen="true" -->
-  <h4>Tyson Funk&copy; 2017</h4>
-  <p>Signin script from <a href="http://www.codingcage.com/2015/01/user-registration-and-login-script-using-php-mysql.html">Pradeep Khodke</a></p>
+  <center>
+    <p>Tyson Funk&copy; 2017</p>
+    <p>Signin script from <a href="http://www.codingcage.com/2015/01/user-registration-and-login-script-using-php-mysql.html">Pradeep Khodke</a></p>
+  </center>
 </div>
 </div>
 </body>
