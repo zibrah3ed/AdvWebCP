@@ -145,11 +145,12 @@
 
     </form>
     </div>
-
+<!-- Parts of page provided by http://www.codingcage.com/2015/01/user-registration-and-login-script-using-php-mysql.html Pradeep Khodke -->
 </div>
 <div data-role="footer" data-position="fixed" >
   <!-- data-fullscreen="true" -->
   <h4>Tyson Funk&copy; 2017</h4>
+  <h3>Signin script from <a href="http://www.codingcage.com/2015/01/user-registration-and-login-script-using-php-mysql.html">Pradeep Khodke</a></h3>
 </div>
 </div>
 </body>
