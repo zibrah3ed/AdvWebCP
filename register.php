@@ -43,7 +43,7 @@
   } else {
    // check email exist or not
    $query = "SELECT userEmail FROM users WHERE userEmail='$email'";
-   $result = mysqli_query($query);
+   $result = mysqli_query($conn,$query);
    $count = mysqli_num_rows($result);
    if($count!=0){
     $error = true;
@@ -66,7 +66,7 @@
   if( !$error ) {
 
    $query = "INSERT INTO users(userName,userEmail,userPass) VALUES('$name','$email','$password')";
-   $res = mysqli_query($query);
+   $res = mysqli_query($conn,$query);
 
    if ($res) {
     $errTyp = "success";

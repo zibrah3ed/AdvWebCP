@@ -42,7 +42,7 @@
 
    $password = hash('sha256', $pass); // password hashing using SHA256
 
-   $res=mysqli_query("SELECT userId, userName, userPass FROM users WHERE userEmail='$email'");
+   $res=mysqli_query($conn,"SELECT userId, userName, userPass FROM users WHERE userEmail='$email'");
    $row=mysqli_fetch_array($res);
    $count = mysqli_num_rows($res); // if uname/pass correct it returns must be 1 row
 
