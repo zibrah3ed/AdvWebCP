@@ -61,24 +61,10 @@
       <div class="ui-btn-inner ui-li ui-corner-top">
           <div class="ui-btn-text">
             <h3 style="font-size:1.5em;" class="ui-li-heading"> Monday</h3>
-            <p style="font-size:1em;" class="ui-li-desc">Breakfast : <a href="#recipes" data-role="button" data-theme="d">Add Recipe</a></p>
-            <p style="font-size:1em;" class="ui-li-desc">Lunch : <a href="#recipes" data-role="button" data-theme="d">Add Recipe</a></p>
-            <p style="font-size:1em;" class="ui-li-desc">Dinner : <a href="#recipes" data-role="button" data-theme="d">Add Recipe</a></p>
-            <p style="font-size:1em;" class="ui-li-desc">Snacks : <a href="#recipes" data-role="button" data-theme="d">Add Recipe</a></p>
-            <!-- AddToAny BEGIN Code adapted from code provided by https://www.addtoany.com/buttons/for/website -->
-                <div class="a2a_kit a2a_kit_size_32 a2a_default_style text-center">
-                <!-- 	1. Required float and margin edits to render properly
-                		2. Privacy Badger blocked button rendering and had to be disabled.
-                -->
-                <p style="float:left; margin: 0em 1em 1em 1em;">Share Recipes: </p>
-                <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
-                <a class="a2a_button_facebook"></a>
-                <a class="a2a_button_twitter"></a>
-                <a class="a2a_button_google_plus"></a>
-                <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true" ></div>
-                </div>
-                <script async src="https://static.addtoany.com/menu/page.js"></script>
-			<!-- AddToAny END -->
+            <p style="font-size:1em;" class="ui-li-desc">Breakfast : <a href="searchRecipes.php?breakfast" data-role="button" data-theme="d">Add Recipe</a></p>
+            <p style="font-size:1em;" class="ui-li-desc">Lunch : <a href="searchRecipes.php?lunch" data-role="button" data-theme="d">Add Recipe</a></p>
+            <p style="font-size:1em;" class="ui-li-desc">Dinner : <a href="searchRecipes.php?dinner" data-role="button" data-theme="d">Add Recipe</a></p>
+            <p style="font-size:1em;" class="ui-li-desc">Snacks : <a href="searchRecipes.php?snack" data-role="button" data-theme="d">Add Recipe</a></p>
         </div>
        </div>
    </li>

@@ -76,26 +76,7 @@
                 ?>
         </ul>
       </div>
-      <!-- AddToAny BEGIN Code adapted from code provided by https://www.addtoany.com/buttons/for/website -->
-                  <div class="a2a_kit a2a_kit_size_32 a2a_default_style text-center">
-                  <!-- 	1. Required float and margin edits to render properly
-                  		2. Privacy Badger blocked button rendering and had to be disabled.
-                  -->
-                  <p style="float:left; margin: 0em 1em 1em 1em;">Share Recipes: </p>
-                  <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
-                  <a class="a2a_button_twitter"></a>
-                  <a class="a2a_button_facebook"></a>
-                  <a class="a2a_button_google_plus"></a>
-                  <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true" ></div>
-
-    </div>
-                  </div>
-                  <script async src="https://static.addtoany.com/menu/page.js"></script>
-  			<!-- AddToAny END -->
-
 				<?php createFooter(); ?>
-  </div>
-    </div>
   </div>
   </body>
 </html>
