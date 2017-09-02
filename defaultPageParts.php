@@ -5,6 +5,14 @@ function createFooter() {
   </div>";
 };
 
+function createLogo() {
+  "<div class='logo'>
+        	<center>
+            	<img src='themes/images/banner.png' class='img-rounded img-responsive' width='264' height='85' alt=''>
+    		</center>
+      	</div>";
+}
+
 
 
 

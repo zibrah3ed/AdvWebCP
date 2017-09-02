@@ -3,6 +3,7 @@
  session_start();
  include 'config.php';
  include 'opendb.php';
+ include 'defaultPageParts.php'
 
  // it will never let you open index(login) page if session is set
  if ( isset($_SESSION['user'])!="" ) {
@@ -68,7 +69,7 @@
 <body>
 
 <div class="container">
-
+<? createLogo(); ?>
  <div id="login-form">
     <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
 
