@@ -1,18 +1,4 @@
-<?php
- ob_start();
- session_start();
- include 'config.php';
- include 'opendb.php';
- include 'defaultPageParts.php';
- // if session is not set this will redirect to login page
- if( !isset($_SESSION['user']) ) {
-  header("Location: index.php");
-  exit;
- }
- // select loggedin users detail
- $res=mysqli_query($conn,"SELECT * FROM users WHERE userId=".$_SESSION['user']);
- $userRow=mysqli_fetch_array($res);
-?>
+
 <html>
 		<head>
 <title>My Recipes</title>
@@ -63,7 +49,7 @@
 
                 include 'config.php';
                 include 'opendb.php';
-
+								include 'defaultPageParts.php';
 
 								$query = $_GET['query'];
 
@@ -111,4 +97,3 @@
       </div>
   </body>
 </html>
-<?php ob_end_flush(); ?>
