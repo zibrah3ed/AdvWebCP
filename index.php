@@ -2,7 +2,7 @@
  ob_start();
  session_start();
  include 'config.php';
- require_once 'opendb.php';
+ include 'opendb.php';
 
  // it will never let you open index(login) page if session is set
  if ( isset($_SESSION['user'])!="" ) {
