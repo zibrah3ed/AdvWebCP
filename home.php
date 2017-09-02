@@ -129,6 +129,7 @@ function signOut() {
        	  		<li><a href="groceryList.php" data-role="button" data-inline="true" class="mainButton">List Generator</a></li>
             	<li><a href="#addrecipe2" data-role="button" data-inline="true" class="mainButton" data-transition="pop">Add Recipe</a></li>
               <li><a href="allgfree.php" data-role="button" data-inline="true" class="mainButton" data-transition="pop">Gluten Free List</a></li>
+              <li><a href="logout.php?logout"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Sign Out</a></li>
 					</center>
   		</div>
       <center>
@@ -136,7 +137,6 @@ function signOut() {
         <div class="g-signin2" data-onsuccess="signedInUser"></div>
 				</div>
       </center>
-      <button><a href="logout.php?logout"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Sign Out</a></button>
 	</div>
 	<div data-role="footer" data-position="fixed" data-fullscreen="true" class="footer">
 	    <p>Tyson Funk&copy; 2017</p><button onclick='signOut()' type="button" class="btn">Sign Out</button>
