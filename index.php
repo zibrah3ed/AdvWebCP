@@ -3,6 +3,7 @@
  session_start();
  include 'config.php';
  include 'opendb.php';
+ include 'defaultPageParts.php';
  // it will never let you open index(login) page if session is set
  if ( isset($_SESSION['user'])!="" ) {
   header("Location: home.php");
@@ -147,13 +148,7 @@
     </div>
 <!-- Parts of page provided by http://www.codingcage.com/2015/01/user-registration-and-login-script-using-php-mysql.html Pradeep Khodke -->
 </div>
-<div data-role="footer" data-position="fixed" >
-  <!-- data-fullscreen="true" -->
-  <center>
-    <p>Tyson Funk&copy; 2017</p>
-    <p>Signin script from <a href="http://www.codingcage.com/2015/01/user-registration-and-login-script-using-php-mysql.html">Pradeep Khodke</a></p>
-  </center>
-</div>
+<?PHP createFooter();?>
 </div>
 </body>
 </html>

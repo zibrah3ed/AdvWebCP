@@ -3,6 +3,7 @@
  session_start();
  include 'config.php';
  include 'opendb.php';
+ include 'defaultPageParts.php';
  // if session is not set this will redirect to login page
  if( !isset($_SESSION['user']) ) {
   header("Location: index.php");
@@ -413,10 +414,7 @@ function signOut() {
                   </table>
                </form>
 		</div>
-  <div data-role="footer" data-position="fixed" >
-		<!-- data-fullscreen="true" -->
-    <h4>Tyson Funk&copy; 2017</h4>
-  </div>
+<?PHP createFooter();?>
 </div>
 </div>
 <!-- End add recipe2 -->
