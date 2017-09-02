@@ -20,7 +20,7 @@
 </head>
 
 	<body>
-		<div id="page" data-role="page" data-theme="a" >
+		<div id="page" data-role="page" data-theme="a" data-add-back-btn="true">
 	<div data-role="header" data-theme="a">
     <h1>
 	     Recipe Search
