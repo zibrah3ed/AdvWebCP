@@ -136,6 +136,7 @@ function signOut() {
         <div class="g-signin2" data-onsuccess="signedInUser"></div>
 				</div>
       </center>
+      <button><a href="logout.php?logout"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Sign Out</a></button>
 	</div>
 	<div data-role="footer" data-position="fixed" data-fullscreen="true" class="footer">
 	    <p>Tyson Funk&copy; 2017</p><button onclick='signOut()' type="button" class="btn">Sign Out</button>
