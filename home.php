@@ -30,6 +30,16 @@
 <!-- Google Login -->
 <meta name="google-signin-client_id" content="581882503556-jbvkik4j01gng4cm05sgcabftpkaov2u.apps.googleusercontent.com">
 <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<link rel="icon" href="images/favicon.png">
+
+</head>
 <body>
 <!-- Scripts -->
 
@@ -125,7 +135,7 @@ function signOut() {
 					<center>
 							<li><a href="searchRecipes.php" class="mainButton" data-inline="true" data-role="button" data-transition="flip">Search Recipes</a></li>
             	<li><a href="displayRecipes.php" class="mainButton" data-inline="true" data-role="button" data-transition="flip">My Recipes</a></li>
-   	  	  		<li><a href="#mealplanner" data-role="button" data-inline="true" class="mainButton" data-transition="flip">Meal Planner</a></li>
+   	  	  		<li><a href="mealplanner.php" data-role="button" data-inline="true" class="mainButton" data-transition="flip">Meal Planner</a></li>
        	  		<li><a href="groceryList.php" data-role="button" data-inline="true" class="mainButton">List Generator</a></li>
             	<li><a href="#addrecipe2" data-role="button" data-inline="true" class="mainButton" data-transition="pop">Add Recipe</a></li>
               <li><a href="allgfree.php" data-role="button" data-inline="true" class="mainButton" data-transition="pop">Gluten Free List</a></li>
