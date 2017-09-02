@@ -63,7 +63,7 @@
 
                 include 'config.php';
                 include 'opendb.php';
-								include 'defaultPageParts.php';
+
 
 								$query = $_GET['query'];
 
