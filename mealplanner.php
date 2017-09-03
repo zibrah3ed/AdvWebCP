@@ -86,9 +86,9 @@
 
             $bfast = mysqli_query($conn, $bfastsql);
 
-            if (mysqli_num_rows($result) > 0) {
+            if (mysqli_num_rows($bfast) > 0) {
                 // output data of each row
-                while ($row = mysqli_fetch_assoc($result)) {
+                while ($row = mysqli_fetch_assoc($bfast)) {
                   echo "<p style='font-size:1em;'
                   class='ui-li-desc'>Breakfast : <a href='searchRecipes.php?breakfast'
                   data-role='button' data-theme='d'>".$row['recipeName']."</a></p>";
