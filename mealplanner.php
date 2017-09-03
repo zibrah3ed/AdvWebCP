@@ -88,7 +88,7 @@
 
             if (mysqli_num_rows($result) > 0) {
                 // output data of each row
-                if ($row = mysqli_fetch_assoc($result)) {
+                while ($row = mysqli_fetch_assoc($result)) {
                   echo "<p style='font-size:1em;'
                   class='ui-li-desc'>Breakfast : <a href='searchRecipes.php?breakfast'
                   data-role='button' data-theme='d'>".$row['recipeName']."</a></p>";
@@ -104,7 +104,7 @@
 
             if (mysqli_num_rows($result) > 0) {
                 // output data of each row
-                if ($row = mysqli_fetch_assoc($result)) {
+                while ($row = mysqli_fetch_assoc($result)) {
                   echo "<p style='font-size:1em;'
                   class='ui-li-desc'>Lunch : <a href='searchRecipes.php?breakfast'
                   data-role='button' data-theme='d'>".$row['recipeName']."</a></p>";
@@ -120,7 +120,7 @@
 
             if (mysqli_num_rows($result) > 0) {
                 // output data of each row
-                if ($row = mysqli_fetch_assoc($result)) {
+                while ($row = mysqli_fetch_assoc($result)) {
                   echo "<p style='font-size:1em;'
                   class='ui-li-desc'>Dinner : <a href='searchRecipes.php?breakfast'
                   data-role='button' data-theme='d'>".$row['recipeName']."</a></p>";
@@ -136,7 +136,7 @@
 
             if (mysqli_num_rows($result) > 0) {
                 // output data of each row
-                if ($row = mysqli_fetch_assoc($result)) {
+                while ($row = mysqli_fetch_assoc($result)) {
                   echo "<p style='font-size:1em;'
                   class='ui-li-desc'>Snack : <a href='searchRecipes.php?breakfast'
                   data-role='button' data-theme='d'>".$row['recipeName']."</a></p>";
@@ -148,20 +148,16 @@
               data-role='button' data-theme='d'>Select a Recipe</a></p>";
             }
 
+            mysqli_close($conn);
             ?>
-            <p style="font-size:1em;" class="ui-li-desc">Lunch : <a href="searchRecipes.php?lunch" data-role="button" data-theme="d"><?php echo $lunchEcho;?></a></p>
-            <p style="font-size:1em;" class="ui-li-desc">Dinner : <a href="searchRecipes.php?dinner" data-role="button" data-theme="d">Add Recipe</a></p>
-            <p style="font-size:1em;" class="ui-li-desc">Snacks : <a href="searchRecipes.php?snack" data-role="button" data-theme="d">Add Recipe</a></p>
         </div>
        </div>
    </li>
   </ul>
 <?php createFooter();
-
-
 ?>
 </div>
 </body>
 </html>
 <?php ob_end_flush();
-mysqli_close($conn);?>
+?>
