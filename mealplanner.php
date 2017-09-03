@@ -20,6 +20,11 @@
               INNER JOIN recipes
               ON recipes.recipeID = mealplans.planBreakfast
               WHERE mealplans.users_userID = '$userID' and mealplans.planDate = '$planDate'";
+$result = mysqli_query($conn, $bfastsql);
+
+
+
+mysqli_close($conn);
 ?>
 <!DOCTYPE html>
 <html>
@@ -77,7 +82,19 @@
        </div>
    </li>
   </ul>
-<?php createFooter();?>
+<?php createFooter();
+if (mysqli_num_rows($result) > 0) {
+    // output data of each row
+    while($row = mysqli_fetch_assoc($result)) {
+      echo "<p>
+      Breakfast Name :".$row['recipeName']."
+      </p>";
+    }
+} else {
+    echo "0 results";
+}
+
+?>
 </div>
 </body>
 </html>
