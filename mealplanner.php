@@ -75,7 +75,7 @@
   <div data-role="content"></div>
   <div data-role="fieldcontain" style="width: 85%; margin: 0 auto;" data-theme="d">
     <label for="date">Date:</label>
-    <input type="date" name="date" id="date" value="<?PHP date('Y-m-d')?>"  />
+    <?PHP echo "<input type='date' name='date' id='date' value='".date('Y-m-d')."'?>";  ?>
   </div>
   <ul data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
   <li class="ui-btn ui-li ui-corner-all" data-theme="d" style="width: 90%; margin: 0 auto; margin-top: 5px;">
@@ -100,53 +100,53 @@
               data-role='button' data-theme='d'>Select a Recipe</a></p>";
             }
 
-            $lunch = mysqli_query($conn, $lunchsql);
-
-            if (mysqli_num_rows($result) > 0) {
-                // output data of each row
-                while ($row = mysqli_fetch_assoc($result)) {
-                  echo "<p style='font-size:1em;'
-                  class='ui-li-desc'>Lunch : <a href='searchRecipes.php?breakfast'
-                  data-role='button' data-theme='d'>".$row['recipeName']."</a></p>";
-
-                }
-            } else {
-              echo "<p style='font-size:1em;'
-              class='ui-li-desc'>Lunch : <a href='searchRecipes.php?breakfast'
-              data-role='button' data-theme='d'>Select a Recipe</a></p>";
-            }
-
-            $dinner = mysqli_query($conn, $dinnersql);
-
-            if (mysqli_num_rows($result) > 0) {
-                // output data of each row
-                while ($row = mysqli_fetch_assoc($result)) {
-                  echo "<p style='font-size:1em;'
-                  class='ui-li-desc'>Dinner : <a href='searchRecipes.php?breakfast'
-                  data-role='button' data-theme='d'>".$row['recipeName']."</a></p>";
-
-                }
-            } else {
-              echo "<p style='font-size:1em;'
-              class='ui-li-desc'>Dinner : <a href='searchRecipes.php?breakfast'
-              data-role='button' data-theme='d'>Select a Recipe</a></p>";
-            }
-
-            $snack = mysqli_query($conn, $snacksql);
-
-            if (mysqli_num_rows($result) > 0) {
-                // output data of each row
-                while ($row = mysqli_fetch_assoc($result)) {
-                  echo "<p style='font-size:1em;'
-                  class='ui-li-desc'>Snack : <a href='searchRecipes.php?breakfast'
-                  data-role='button' data-theme='d'>".$row['recipeName']."</a></p>";
-
-                }
-            } else {
-              echo "<p style='font-size:1em;'
-              class='ui-li-desc'>Snack : <a href='searchRecipes.php?breakfast'
-              data-role='button' data-theme='d'>Select a Recipe</a></p>";
-            }
+            // $lunch = mysqli_query($conn, $lunchsql);
+            //
+            // if (mysqli_num_rows($result) > 0) {
+            //     // output data of each row
+            //     while ($row = mysqli_fetch_assoc($result)) {
+            //       echo "<p style='font-size:1em;'
+            //       class='ui-li-desc'>Lunch : <a href='searchRecipes.php?breakfast'
+            //       data-role='button' data-theme='d'>".$row['recipeName']."</a></p>";
+            //
+            //     }
+            // } else {
+            //   echo "<p style='font-size:1em;'
+            //   class='ui-li-desc'>Lunch : <a href='searchRecipes.php?breakfast'
+            //   data-role='button' data-theme='d'>Select a Recipe</a></p>";
+            // }
+            //
+            // $dinner = mysqli_query($conn, $dinnersql);
+            //
+            // if (mysqli_num_rows($result) > 0) {
+            //     // output data of each row
+            //     while ($row = mysqli_fetch_assoc($result)) {
+            //       echo "<p style='font-size:1em;'
+            //       class='ui-li-desc'>Dinner : <a href='searchRecipes.php?breakfast'
+            //       data-role='button' data-theme='d'>".$row['recipeName']."</a></p>";
+            //
+            //     }
+            // } else {
+            //   echo "<p style='font-size:1em;'
+            //   class='ui-li-desc'>Dinner : <a href='searchRecipes.php?breakfast'
+            //   data-role='button' data-theme='d'>Select a Recipe</a></p>";
+            // }
+            //
+            // $snack = mysqli_query($conn, $snacksql);
+            //
+            // if (mysqli_num_rows($result) > 0) {
+            //     // output data of each row
+            //     while ($row = mysqli_fetch_assoc($result)) {
+            //       echo "<p style='font-size:1em;'
+            //       class='ui-li-desc'>Snack : <a href='searchRecipes.php?breakfast'
+            //       data-role='button' data-theme='d'>".$row['recipeName']."</a></p>";
+            //
+            //     }
+            // } else {
+            //   echo "<p style='font-size:1em;'
+            //   class='ui-li-desc'>Snack : <a href='searchRecipes.php?breakfast'
+            //   data-role='button' data-theme='d'>Select a Recipe</a></p>";
+            // }
 
             mysqli_close($conn);
             ?>
@@ -155,6 +155,7 @@
    </li>
   </ul>
 <?php createFooter();
+echo $userID ;
 ?>
 </div>
 </body>
