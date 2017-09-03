@@ -12,6 +12,14 @@
  // select loggedin users detail
  $res=mysqli_query($conn,"SELECT * FROM users WHERE userId=".$_SESSION['user']);
  $userRow=mysqli_fetch_array($res);
+
+ $userID = $_SESSION['user'];
+ $planDate = $_GET['date'];
+
+ $bfastsql ="SELECT recipeName from mealplans
+              INNER JOIN recipes
+              ON recipes.recipeID = mealplans.planBreakfast
+              WHERE mealplans.users_userID = '$userID' and mealplans.planDate = '$planDate'";
 ?>
 <!DOCTYPE html>
 <html>
@@ -69,8 +77,7 @@
        </div>
    </li>
   </ul>
-<?php createFooter();
-  echo $_SESSION['user'];?>
+<?php createFooter();?>
 </div>
 </body>
 </html>
