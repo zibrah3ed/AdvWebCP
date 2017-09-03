@@ -69,7 +69,8 @@
        </div>
    </li>
   </ul>
-<?php createFooter(); ?>
+<?php createFooter();
+  echo $_SESSION['user'];?>
 </div>
 </body>
 </html>
