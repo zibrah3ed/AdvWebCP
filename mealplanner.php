@@ -20,8 +20,36 @@
               INNER JOIN recipes
               ON recipes.recipeID = mealplans.planBreakfast
               WHERE mealplans.users_userID = '$userID' and mealplans.planDate = '$planDate'";
-$result = mysqli_query($conn, $bfastsql);
+$bfast = mysqli_query($conn, $bfastsql);
 
+if (mysqli_num_rows($result) > 0) {
+    // output data of each row
+    if ($row = mysqli_fetch_assoc($result)) {
+      $bfastEcho = "<p>
+      Recipe Name :".$row['recipeName']."
+      </p>";
+    }
+} else {
+    $bfastEcho = "Select a recipe.";
+}
+
+$lunchsql ="SELECT recipeName from mealplans
+             INNER JOIN recipes
+             ON recipes.recipeID = mealplans.planLunch
+             WHERE mealplans.users_userID = '$userID' and mealplans.planDate = '$planDate'";
+
+$lunch = mysqli_query($conn, $lunchsql);
+
+if (mysqli_num_rows($result) > 0) {
+   // output data of each row
+   if ($row = mysqli_fetch_assoc($result)) {
+     $lunchEcho = "<p>
+     Recipe Name :".$row['recipeName']."
+     </p>";
+   }
+} else {
+   $lunchEcho = "Select a recipe.";
+}
 
 
 mysqli_close($conn);
@@ -74,8 +102,8 @@ mysqli_close($conn);
       <div class="ui-btn-inner ui-li ui-corner-top">
           <div class="ui-btn-text">
             <h3 style="font-size:1.5em;" class="ui-li-heading"> Monday</h3>
-            <p style="font-size:1em;" class="ui-li-desc">Breakfast : <a href="searchRecipes.php?breakfast" data-role="button" data-theme="d">Add Recipe</a></p>
-            <p style="font-size:1em;" class="ui-li-desc">Lunch : <a href="searchRecipes.php?lunch" data-role="button" data-theme="d">Add Recipe</a></p>
+            <p style="font-size:1em;" class="ui-li-desc">Breakfast : <a href="searchRecipes.php?breakfast" data-role="button" data-theme="d"><?php echo $bfastEcho;?></a></p>
+            <p style="font-size:1em;" class="ui-li-desc">Lunch : <a href="searchRecipes.php?lunch" data-role="button" data-theme="d"><?php echo $lunchEcho;?></a></p>
             <p style="font-size:1em;" class="ui-li-desc">Dinner : <a href="searchRecipes.php?dinner" data-role="button" data-theme="d">Add Recipe</a></p>
             <p style="font-size:1em;" class="ui-li-desc">Snacks : <a href="searchRecipes.php?snack" data-role="button" data-theme="d">Add Recipe</a></p>
         </div>
@@ -83,16 +111,7 @@ mysqli_close($conn);
    </li>
   </ul>
 <?php createFooter();
-if (mysqli_num_rows($result) > 0) {
-    // output data of each row
-    while($row = mysqli_fetch_assoc($result)) {
-      echo "<p>
-      Breakfast Name :".$row['recipeName']."
-      </p>";
-    }
-} else {
-    echo "0 results";
-}
+
 
 ?>
 </div>
