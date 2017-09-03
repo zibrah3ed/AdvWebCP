@@ -21,24 +21,18 @@
               ON recipes.recipeID = mealplans.planBreakfast
               WHERE mealplans.users_userID = '$userID' and mealplans.planDate = '$planDate'";
 
-$lunchsql ="SELECT recipeName from mealplans
+  $lunchsql ="SELECT recipeName from mealplans
              INNER JOIN recipes
              ON recipes.recipeID = mealplans.planLunch
              WHERE mealplans.users_userID = '$userID' and mealplans.planDate = '$planDate'";
-
-$lunch = mysqli_query($conn, $lunchsql);
-
-if (mysqli_num_rows($result) > 0) {
-   // output data of each row
-   if ($row = mysqli_fetch_assoc($result)) {
-     $lunchEcho = "<p>
-     Recipe Name :".$row['recipeName']."
-     </p>";
-   }
-} else {
-   $lunchEcho = "Select a recipe.";
-}
-
+  $dinnersql ="SELECT recipeName from mealplans
+              INNER JOIN recipes
+              ON recipes.recipeID = mealplans.planDinner
+              WHERE mealplans.users_userID = '$userID' and mealplans.planDate = '$planDate'";
+  $snacksql ="SELECT recipeName from mealplans
+              INNER JOIN recipes
+              ON recipes.recipeID = mealplans.planSnack
+              WHERE mealplans.users_userID = '$userID' and mealplans.planDate = '$planDate'";
 ?>
 <!DOCTYPE html>
 <html>
@@ -106,6 +100,53 @@ if (mysqli_num_rows($result) > 0) {
               data-role='button' data-theme='d'>Select a Recipe</a></p>";
             }
 
+            $lunch = mysqli_query($conn, $lunchsql);
+
+            if (mysqli_num_rows($result) > 0) {
+                // output data of each row
+                if ($row = mysqli_fetch_assoc($result)) {
+                  echo "<p style='font-size:1em;'
+                  class='ui-li-desc'>Lunch : <a href='searchRecipes.php?breakfast'
+                  data-role='button' data-theme='d'>".$row['recipeName']."</a></p>";
+
+                }
+            } else {
+              echo "<p style='font-size:1em;'
+              class='ui-li-desc'>Lunch : <a href='searchRecipes.php?breakfast'
+              data-role='button' data-theme='d'>Select a Recipe</a></p>";
+            }
+
+            $dinner = mysqli_query($conn, $dinnersql);
+
+            if (mysqli_num_rows($result) > 0) {
+                // output data of each row
+                if ($row = mysqli_fetch_assoc($result)) {
+                  echo "<p style='font-size:1em;'
+                  class='ui-li-desc'>Dinner : <a href='searchRecipes.php?breakfast'
+                  data-role='button' data-theme='d'>".$row['recipeName']."</a></p>";
+
+                }
+            } else {
+              echo "<p style='font-size:1em;'
+              class='ui-li-desc'>Dinner : <a href='searchRecipes.php?breakfast'
+              data-role='button' data-theme='d'>Select a Recipe</a></p>";
+            }
+
+            $snack = mysqli_query($conn, $snacksql);
+
+            if (mysqli_num_rows($result) > 0) {
+                // output data of each row
+                if ($row = mysqli_fetch_assoc($result)) {
+                  echo "<p style='font-size:1em;'
+                  class='ui-li-desc'>Snack : <a href='searchRecipes.php?breakfast'
+                  data-role='button' data-theme='d'>".$row['recipeName']."</a></p>";
+
+                }
+            } else {
+              echo "<p style='font-size:1em;'
+              class='ui-li-desc'>Snack : <a href='searchRecipes.php?breakfast'
+              data-role='button' data-theme='d'>Select a Recipe</a></p>";
+            }
 
             ?>
             <p style="font-size:1em;" class="ui-li-desc">Lunch : <a href="searchRecipes.php?lunch" data-role="button" data-theme="d"><?php echo $lunchEcho;?></a></p>
