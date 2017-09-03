@@ -135,7 +135,7 @@ function signOut() {
 					<center>
 							<li><a href="searchRecipes.php" class="mainButton" data-inline="true" data-role="button" data-transition="flip">Search Recipes</a></li>
             	<li><a href="displayRecipes.php" class="mainButton" data-inline="true" data-role="button" data-transition="flip">My Recipes</a></li>
-   	  	  		<li><a href="mealplanner.php" data-role="button" data-inline="true" class="mainButton" data-transition="flip">Meal Planner</a></li>
+   	  	  		<?php echo "<li><a href='mealplanner.php?date=".date('Y-m-d')."'data-role='button' data-inline='true' class='mainButton' data-transition='flip'>Meal Planner</a></li>"; ?>
        	  		<li><a href="groceryList.php" data-role="button" data-inline="true" class="mainButton">List Generator</a></li>
             	<li><a href="#addrecipe2" data-role="button" data-inline="true" class="mainButton" data-transition="pop">Add Recipe</a></li>
               <li><a href="allgfree.php" data-role="button" data-inline="true" class="mainButton" data-transition="pop">Gluten Free List</a></li>
