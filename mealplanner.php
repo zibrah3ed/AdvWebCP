@@ -67,7 +67,7 @@ mysqli_close($conn);
   <div data-role="content"></div>
   <div data-role="fieldcontain" style="width: 85%; margin: 0 auto;" data-theme="d">
     <label for="date">Date:</label>
-    <input type="date" name="date" id="date" value=""  />
+    <input type="date" name="date" id="date" value="<?PHP date('Y-m-d')?>"  />
   </div>
   <ul data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
   <li class="ui-btn ui-li ui-corner-all" data-theme="d" style="width: 90%; margin: 0 auto; margin-top: 5px;">
