@@ -51,8 +51,6 @@ if (mysqli_num_rows($result) > 0) {
    $lunchEcho = "Select a recipe.";
 }
 
-
-mysqli_close($conn);
 ?>
 <!DOCTYPE html>
 <html>
@@ -117,4 +115,5 @@ mysqli_close($conn);
 </div>
 </body>
 </html>
-<?php ob_end_flush(); ?>
+<?php ob_end_flush();
+mysqli_close($conn);?>
