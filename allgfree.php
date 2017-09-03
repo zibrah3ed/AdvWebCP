@@ -95,8 +95,8 @@
         </ul>
       </div>
   </div>
-    </div>
   <?PHP createFooter(); ?>
+    </div>
   </body>
 </html>
 <?php ob_end_flush(); ?>
