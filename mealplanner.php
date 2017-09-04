@@ -14,7 +14,7 @@
  $userRow=mysqli_fetch_array($res);
 
  $userID = $_SESSION['user'];
- $planDate = $_GET['date'];
+ $planDate = date('y-m-d',$_GET['date']);
 
  $bfastsql ="SELECT recipeName from mealplans
               INNER JOIN recipes
@@ -74,10 +74,11 @@
   </div>
   <div data-role="content"></div>
   <div data-role="fieldcontain" style="width: 85%; margin: 0 auto;" data-theme="d">
-    <form action="mealplanner.php">
-    <label for="date">Date:</label>
-    <?PHP echo "<input type='date' name='date' id='date' value='".date('Y-m-d')."'?>";  ?>
-  </form>
+    <!-- <label for="date">Date:</label> -->
+    <!-- <?PHP echo "<input type='date' name='date' id='date' value='".date('Y-m-d')."'?>";  ?> -->
+    <form action="mealplanner.php" method="get">
+  <input type="text" id="datepicker" name="date" value="Date"/>
+</form>
   </div>
   <ul data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
   <li class="ui-btn ui-li ui-corner-all" data-theme="d" style="width: 90%; margin: 0 auto; margin-top: 5px;">
