@@ -74,8 +74,10 @@
   </div>
   <div data-role="content"></div>
   <div data-role="fieldcontain" style="width: 85%; margin: 0 auto;" data-theme="d">
+    <form action="mealplanner.php">
     <label for="date">Date:</label>
     <?PHP echo "<input type='date' name='date' id='date' value='".date('Y-m-d')."'?>";  ?>
+  </form>
   </div>
   <ul data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
   <li class="ui-btn ui-li ui-corner-all" data-theme="d" style="width: 90%; margin: 0 auto; margin-top: 5px;">
@@ -155,7 +157,6 @@
    </li>
   </ul>
 <?php createFooter();
-echo $userID ;
 ?>
 </div>
 </body>
