@@ -84,7 +84,7 @@
       <div class="ui-btn-inner ui-li ui-corner-top">
           <div class="ui-btn-text">
             <?PHP
-            echo "<h3 style='font-size:1.5em;' class='ui-li-heading'>".date('l',$planDate). "</h3>";
+            echo "<h3 style='font-size:1.5em;' class='ui-li-heading'>".date('w',strtotime($planDate)). "</h3>";
 
             $bfast = mysqli_query($conn, $bfastsql);
 
