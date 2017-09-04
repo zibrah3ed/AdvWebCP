@@ -76,8 +76,7 @@
   <div data-role="fieldcontain" style="width: 85%; margin: 0 auto;" data-theme="d">
     <form action='mealplanner.php' method='get'>
       <label for="date">Date:</label>
-      <?PHP echo "<input type='text' name='date' id='date' value='".date('Y-m-d')."'?>";  ?>
-      <input type='button' id="submitMe" value="Select Date"/>
+      <?PHP echo "<input type='search' name='date' id='date' value='".date('Y-m-d',$planDate)."'?>";  ?>
     </form>
   </div>
   <ul data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
