@@ -54,12 +54,11 @@
 <!-- Jquery header data -->
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link href="https://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" rel="stylesheet" type="text/css"/>
-<link href="styles/custom.css" rel="stylesheet" type="text/css">
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
 <script src="https://code.jquery.com/jquery-1.8.3.min.js" type="text/javascript"></script>
 <script src="https://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js" type="text/javascript"></script>
 <script src="javascript/storage.js"></script>
-
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="styles/custom.css" rel="stylesheet" type="text/css">
 <!-- Google Login -->
 <meta name="google-signin-client_id" content="581882503556-jbvkik4j01gng4cm05sgcabftpkaov2u.apps.googleusercontent.com">
 <script src="https://apis.google.com/js/platform.js" async defer></script>
