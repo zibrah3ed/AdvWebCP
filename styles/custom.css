@@ -114,6 +114,7 @@ table, th, td {
 	margin: 5%,5%,%5,5%;
 }
 
-.input-group-addon {
+#formfix {
 	background-color: white;
+	color: black;
 }

@@ -111,7 +111,7 @@
 
             <div class="form-group">
              <div class="input-group">
-                <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+                <span class="input-group-addon" id="formfix"><span class="glyphicon glyphicon-envelope"></span></span>
              <input type="email" name="email" class="form-control" placeholder="Your Email" value="<?php echo $email; ?>" maxlength="40"/>
                 </div>
                 <span class="text-danger"><?php echo $emailError; ?></span>
