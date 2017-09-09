@@ -118,7 +118,7 @@
             </div>
 
             <div class="form-group">
-             <div class="input-group">
+             <div class="input-group" id="formfix2">
                 <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
              <input type="password" name="pass" class="form-control" placeholder="Your Password" maxlength="15" />
                 </div>
