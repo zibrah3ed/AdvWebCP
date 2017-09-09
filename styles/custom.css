@@ -113,3 +113,7 @@ table, th, td {
 .myTable {
 	margin: 5%,5%,%5,5%;
 }
+
+.input-group-addon {
+	background-color: white;
+}
